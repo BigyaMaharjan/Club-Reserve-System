@@ -1,0 +1,280 @@
+﻿@model CRS.CLUB.APPLICATION.Models.ClubManagement.ClubModel
+<div class="flex justify-between pb-[24px]">
+    <form>
+        <div class="relative input-search-wrapper">
+            <div class="absolute inset-y-0 left-0 flex items-center pl-[16px] pointer-events-none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                    <path d="M17.5 18L13.875 14.375M15.8333 9.66667C15.8333 13.3486 12.8486 16.3333 9.16667 16.3333C5.48477 16.3333 2.5 13.3486 2.5 9.66667C2.5 5.98477 5.48477 3 9.16667 3C12.8486 3 15.8333 5.98477 15.8333 9.66667Z"
+                          stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+            <input type="search" id="default-search" class="input-search block w-full " placeholder="Search" required>
+        </div>
+    </form>
+
+</div>
+<div class="table-tab">
+    <div class="px-[16px] py-[12px] flex justify-between entry-export-container">
+        <div class="flex items-center">
+            show&nbsp;<select id="countries" class="select-entires">
+                <option value="5" selected>5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">100</option>
+            </select>&nbsp;entries
+        </div>
+        <div class="btn btn-primary gap-[8px]" data-drawer-target="add-new-gallery" data-drawer-show="add-new-gallery"
+             data-drawer-placement="right" data-drawer-backdrop="false" aria-controls="drawer-disabled-backdrop">
+            <img src="~/Content/assets/images/plus-circle-solid.svg" />
+            Add New
+        </div>
+    </div>
+    <div class="relative overflow-x-auto">
+        <table class="w-full  text-left club-table">
+            <thead class="club-table-thead">
+                <tr>
+                    <th scope="col" class="p-[12px]">
+                        <div class="flex">
+                            S.N
+                            <div class="relative pl-[5px]">
+                                <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                            </div>
+                        </div>
+                    </th>
+                    <th scope="col" class="p-[12px]">
+                        <div class="flex">
+                            Title
+                            <div class="relative pl-[5px]">
+                                <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                            </div>
+                        </div>
+                    </th>
+                    <th scope="col" class="p-[12px]">
+                        <div class="flex">
+                            Image
+                            <div class="relative pl-[5px]">
+                                <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                            </div>
+                        </div>
+                    </th>
+                    <th scope="col" class="p-[12px]">
+                        <div class="flex">
+                            Created On
+                            <div class="relative pl-[5px]">
+                                <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                            </div>
+                        </div>
+                    </th>
+                    <th scope="col" class="p-[12px]">
+                        <div class="flex">
+                            Updated On <div class="relative pl-[5px]">
+                                <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                            </div>
+                        </div>
+                    </th>
+                    <th scope="col" class="p-[12px]">
+                        <div class="flex justify-center">
+                            Action
+                            <div class="relative pl-[5px]">
+                                <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                            </div>
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    var i = 1;
+                }
+                @foreach (var item in ViewData["gridData"] as IEnumerable<CRS.CLUB.APPLICATION.Models.ClubManagement.ClubManagementModel>)
+                {
+                    <tr class="bg-white border-b Row_@i">
+                        <td class="p-[12px]">
+                            @i
+                        </td>
+                        <td class="p-[12px]">
+                            @item.Title
+                        </td>
+                        <td class="p-[12px]">
+                            <img class="table-image h-[36px] w-[88px]" src="@item.ImagePath" />
+                        </td>
+                        <td class="p-[12px]">
+                            @item.CreatedDate
+                            @*<div class="approved gap-[6px]">Active <i class="fa-solid fa-caret-down"></i></div>*@
+                        </td>
+                        <td class="p-[12px]">
+                            @item.CreatedDate
+                        </td>
+                        <td class="p-[12px]">
+                            <div class="flex gap-[7px] justify-center text-[16px] ">
+                                <div class="EditDetail" data-drawer-target="edit-gallery" data-drawer-show="edit-gallery"
+                                     data-drawer-backdrop="false" aria-controls="drawer-disabled-backdrop" id="@i">
+                                    <i class="fa-regular fa-pen-to-square text-[#989898] cursor-pointer"></i>
+                                    <div class="agentid_@i" id="@i" style="display: none;">@item.AgentID</div>
+                                    <div class="sno_@i" id="@i" style="display: none;">@item.Sno</div>
+                                </div>
+                                <div>
+                                    <a href="/ClubManagement/DeleteClubManagement?AgentId=@item.AgentID&clubsno=@item.Sno"><i class="fa-solid fa-trash-can text-primary-100 cursor-pointer"></i></a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    i++;
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="pagination-club">
+        <div class="show-entry">Showing 1 to 5 of 301 Entries</div>
+        <div class="flex gap-[12px]">
+            <div class="btn btn-secondary-box-shadow ">Previous</div>
+            <div class="flex gap-[12px]">
+                <div class="pagination-number active">
+                    1
+                </div>
+                <div class="pagination-number">
+                    2
+                </div>
+                <div class="pagination-number">
+                    3
+                </div>
+                <div class="pagination-number">
+                    ..
+                </div>
+                <div class="pagination-number">
+                    10
+                </div>
+
+            </div>
+            <div class="btn btn-secondary-box-shadow ">Next</div>
+        </div>
+    </div>
+</div>
+<div id="add-new-gallery"
+     class="drawer-close-disable  flex justify-end fixed top-0 right-0 z-40 h-screen overflow-y-auto transition-transform translate-x-full  dark:bg-gray-800"
+     tabindex="-1" aria-labelledby="drawer-right-label">
+    <div class="bg-white w-[574px] drawer-container relative">
+        <div class="drawer-form-container sticky top-0 ">
+            <div class="drawer-form flex justify-between bg-secondary-color-pink py-[16px] px-[24px] h-[56px]">
+                <div>Manage Event</div>
+                <button type="button" data-drawer-hide="add-new-gallery" aria-controls="add-new-gallery"
+                        class="text-[20px]">
+                    <i class="las la-window-close text-white"></i>
+                </button>
+            </div>
+        </div>
+        <div class="p-[24px]">
+            @using (Html.BeginForm("AddClubImage", "ClubManagement", new { }, FormMethod.Post, new { @role = "form", @id = "UploadForm", enctype = "multipart/form-data" }))
+            {
+                <div class="grid grid-cols-1 gap-x-[20px] gap-y-[16px]">
+                    <div class="input-field-common">
+                        <label for="Title"
+                               class="block mb-[12px] text-sm font-medium text-secondary-100 dark:text-white">
+                            Title
+                        </label>
+                        <input type="text" class="w-full editTitle" placeholder="Title" name="Title" id="GalTitle" required oninput="checkValGal()">
+                        <span class="error">@Html.ValidationMessageFor(model => model.Title)</span>
+                    </div>
+                    <div>
+                        <label for="Title"
+                               class="block mb-[12px] text-sm font-medium text-secondary-100 dark:text-white">
+                            Gallery/Banner
+                        </label>
+                        <div class="file-upload-common">
+                            <label for="file_input" class="custom-file-upload bg-[#CC527A]" name="ImageFile">
+                                <span>Choose Logo</span>
+                            </label>
+                            <span class='text-danger'>*</span>
+                            <input id="file_input" type="file" style="display:none;" class="form-control-file ImageFile imageInput editImg" oninput="checkValGal()">
+                            <p id="file_name_display"></p>
+                        </div>
+                        <div class="text-xs text-error mt-[8px]">
+                            Note: Image should be in HEIF format and Maximum file
+                            size
+                            is 5 MB.
+                        </div>
+                        <span class="error">@Html.ValidationMessageFor(model => model.ImageFile)</span>
+                    </div>
+                </div>
+
+                <div class="flex justify-end py-[16px] ">
+                    <div class="flex gap-[24px]">
+                        <div class="btn btn-secondary" data-drawer-hide="add-new-gallery"
+                             aria-controls="add-new-gallery">Cancel</div>
+                        <div class="btn btn-primary">
+                            <button type="submit" onclick="checkImage(event)">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<div id="edit-gallery"
+     class="drawer-close-disable  flex justify-end fixed top-0 right-0 z-40 h-screen overflow-y-auto transition-transform translate-x-full  dark:bg-gray-800"
+     tabindex="-1" aria-labelledby="drawer-right-label" style="display: none;">
+    <div class="bg-white w-[574px] drawer-container relative">
+        <div class="drawer-form-container sticky top-0 ">
+            <div class="drawer-form flex justify-between bg-secondary-color-pink py-[16px] px-[24px] h-[56px]">
+                <div>Manage Event</div>
+                <button type="button" data-drawer-hide="edit-gallery" aria-controls="edit-gallery"
+                        class="text-[20px]">
+                    <i class="las la-window-close text-white"></i>
+                </button>
+            </div>
+        </div>
+        <div class="p-[24px]">
+            @using (Html.BeginForm("EditClubManagement", "ClubManagement", new { }, FormMethod.Post, new { @role = "form", @id = "UploadForm", enctype = "multipart/form-data" }))
+            {
+                <input type="text" class="w-full " name="AgentId" style="display:none" id="EAgentID">
+                <input type="text" class="w-full " name="ClubSno" style="display:none" id="ESNO">
+                <div class="grid grid-cols-1 gap-x-[20px] gap-y-[16px]">
+                    <div class="input-field-common">
+                        <label for="Title"
+                               class="block mb-[12px] text-sm font-medium text-secondary-100 dark:text-white">
+                            Title
+                        </label>
+                        <input type="text" class="w-full editTitle2" placeholder="Title" name="Title" id="ETTitle" required oninput="checkModGal()">
+                        <span class="error">@Html.ValidationMessageFor(model => model.Title)</span>
+                    </div>
+                    <div>
+                        <label for="Title"
+                               class="block mb-[12px] text-sm font-medium text-secondary-100 dark:text-white">
+                            Gallery/Banner
+                        </label>
+                        <div class="file-upload-common">
+                            <label for="file_input" class="custom-file-upload bg-[#CC527A]" name="ImageFile">
+                                <span>Choose Logo</span>
+                            </label>
+                            <span class='text-danger'>*</span>
+                            <input id="file_input" type="file" style="display:none;" class="form-control-file ImageFile imageInput editImg" oninput="checkModGal()">
+                            <p id="file_name_display" class="fileNameDisplay"></p>
+                        </div>
+                        <div class="text-xs text-error mt-[8px]">
+                            Note: Image should be in HEIF format and Maximum file
+                            size
+                            is 5 MB.
+                        </div>
+                        <span class="error">@Html.ValidationMessageFor(model => model.ImageFile)</span>
+                    </div>
+                </div>
+
+                <div class="flex justify-end py-[16px] ">
+                    <div class="flex gap-[24px]">
+                        <div class="btn btn-secondary editCancel" @*data-drawer-hide="edit-gallery"
+                             aria-controls="edit-gallery" *@>Cancel</div>
+                        <div class="btn btn-primary">
+                            <button type="submit" onclick="EcheckImage(event)">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

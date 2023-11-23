@@ -1,0 +1,1134 @@
+﻿
+@{
+    ViewBag.Title = "Booking Request List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var allbookingrequest = ViewBag.AllBookingRequestList;
+    var pendingbookingrequestlist = ViewBag.PendingBookingList;
+    var approvedbookingrequestlist = ViewBag.ApprovedBookingList;
+}
+
+<div class="flex flex-col gap-[32px] pb-4">
+    @Html.AntiForgeryToken()
+    <!-- booking information  -->
+    <div class="bg-gray-200 booking-info grid gap-[20px]">
+        <div>
+            <div class="heading-title">Booking Request</div>
+            <div class="span-title-light-gray">Manage club booking request</div>
+        </div>
+
+        <div class="flex gap-[32px] ">
+            <div class="booking-card">
+                <div class="booking-card-title">
+                    Total Bookings
+                </div>
+                <div class="booking-card-total">
+                    10,245
+                    <span>+ 36% <img src="~/Content/assets/images/club/arrow-up.svg" /> </span>
+                </div>
+            </div>
+            <div class="booking-card">
+                <div class="booking-card-title">
+                    Today’s Bookings
+                </div>
+                <div class="booking-card-total">
+                    10,245
+                    <span>+ 36% <img src="~/Content/assets/images/club/arrow-up.svg" /> </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- booking information  -->
+    <!-- serach date information  -->
+    <div class="px-[32px] mt-[-25px] flex justify-between">
+
+        <form>
+            <div class="relative input-search-wrapper">
+                <div class="absolute inset-y-0 left-0 flex items-center pl-[16px] pointer-events-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                        <path d="M17.5 18L13.875 14.375M15.8333 9.66667C15.8333 13.3486 12.8486 16.3333 9.16667 16.3333C5.48477 16.3333 2.5 13.3486 2.5 9.66667C2.5 5.98477 5.48477 3 9.16667 3C12.8486 3 15.8333 5.98477 15.8333 9.66667Z"
+                              stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <input type="search" id="default-search" class="input-search block w-full " placeholder="Search"
+                       required>
+
+
+            </div>
+        </form>
+        <div class="flex gap-[24px]">
+            <div class="bg-white ">
+                <div class="flex tab-container">
+                    <button id="tab1Button" class="tab-button tab-link active">Today</button>
+                    <button id="tab2Button" class="tab-button tab-link">Tomorrow</button>
+                    <button id="tab3Button" class="tab-button tab-link">Day After Tomorrow</button>
+                </div>
+            </div>
+            <!--- use active to have select css --->
+            <div class="custom-date " data-drawer-target="drawer-right-example" data-drawer-show="drawer-right-example"
+                 data-drawer-placement="right" aria-controls="drawer-right-example">
+                <img src="~/Content/assets/images/club/calendar-week-solid.svg" alt="date" />
+                Custom Date
+            </div>
+        </div>
+    </div>
+    <div class="bg-white px-[32px] ">
+        <div id="tab1" class="tab-content">
+            <!-- Content for Tab 1 -->
+            <div class="flex gap-[8px]">
+                <div class="select-time active">
+                    12:00 - 17:00 PM (12)
+                </div>
+                <div class="select-time">
+                    01:00 - 17:00 PM (24)
+                </div>
+                <div class="select-time">
+                    04:00 - 12:00 PM (24)
+                </div>
+                <div class="select-time">
+                    06:00 - 15:00 PM (24)
+                </div>
+                <div class="select-time">
+                    08:00 - 16:00 PM (24)
+                </div>
+                <div class="select-time">
+                    14:00 - 02:00 AM (24)
+                </div>
+                <div class="select-time">
+                    17:00 - 05:00 AM (24)
+                </div>
+
+            </div>
+        </div>
+        <div id="tab2" class="tab-content hidden">
+            <!-- Content for Tab 2 -->
+            <div class="flex gap-[8px]">
+                <div class="select-time active">
+                    12:00 - 17:00 PM (12)
+                </div>
+                <div class="select-time">
+                    01:00 - 17:00 PM (24)
+                </div>
+                <div class="select-time">
+                    04:00 - 12:00 PM (24)
+                </div>
+                <div class="select-time">
+                    06:00 - 15:00 PM (24)
+                </div>
+                <div class="select-time">
+                    08:00 - 16:00 PM (24)
+                </div>
+                <div class="select-time">
+                    14:00 - 02:00 AM (24)
+                </div>
+                <div class="select-time">
+                    17:00 - 05:00 AM (24)
+                </div>
+
+            </div>
+        </div>
+        <div id="tab3" class="tab-content hidden">
+            <!-- Content for Tab 3 -->
+            <div class="flex gap-[8px]">
+                <div class="select-time active">
+                    12:00 - 17:00 PM (12)
+                </div>
+                <div class="select-time">
+                    01:00 - 17:00 PM (24)
+                </div>
+                <div class="select-time">
+                    04:00 - 12:00 PM (24)
+                </div>
+                <div class="select-time">
+                    06:00 - 15:00 PM (24)
+                </div>
+                <div class="select-time">
+                    08:00 - 16:00 PM (24)
+                </div>
+                <div class="select-time">
+                    14:00 - 02:00 AM (24)
+                </div>
+                <div class="select-time">
+                    17:00 - 05:00 AM (24)
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- serach date information  -->
+    <!-- table --->
+    <div class="px-[32px]">
+        <div class="flex gap-[24px]" style="border-bottom: 1px solid #f4f4f4;">
+            <div class="flex tab-container-plane bg-white gap-[16px]">
+                <button id="tab1Button" class="tab-button-plane tab-link active">All</button>
+                <button id="tab2Button" class="tab-button-plane tab-link">Approved</button>
+                <button id="tab3Button" class="tab-button-plane tab-link">Pending</button>
+            </div>
+        </div>
+    </div>
+    <div class="px-[32px]">
+        <div class="bg-white">
+            <div id="tab1" class="tab-content-plane table-tab">
+                <div class="px-[16px] py-[12px] flex justify-between entry-export-container">
+                    <div class="flex items-center">
+                        show&nbsp;<select id="countries" class="select-entires">
+                            <option value="5" selected>5</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">100</option>
+                        </select>&nbsp;entries
+                    </div>
+                    <div class="export-button">
+                        <img src="~/Content/assets/images/club/download-solid.svg" /> export
+                    </div>
+                </div>
+                <div class="relative overflow-x-auto">
+                    <!--all booking request table grid section-->
+                    <table class="w-full  text-left club-table">
+                        <thead class="club-table-thead">
+                            <tr>
+                                <th scope="col" class="p-[12px]">
+                                    <div class="flex">
+                                        S.N
+                                        <div class="relative pl-[5px]">
+                                            <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                            <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col" class="p-[12px]">
+                                    <div class="flex">
+                                        Customer
+                                        <div class="relative pl-[5px]">
+                                            <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                            <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col" class="p-[12px]">
+                                    <div class="flex">
+                                        Plan
+                                        <div class="relative pl-[5px]">
+                                            <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                            <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col" class="p-[12px]">
+                                    <div class="flex">
+                                        People
+                                        <div class="relative pl-[5px]">
+                                            <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                            <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col" class="p-[12px]">
+                                    <div class="flex">
+                                        No. of Hosts
+                                        <div class="relative pl-[5px]">
+                                            <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                            <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col" class="p-[12px]">
+                                    <div class="flex">
+                                        Visit Date
+                                        <div class="relative pl-[5px]">
+                                            <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                            <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col" class="p-[12px]">
+                                    <div class="flex">
+                                        Visit Time
+                                        <div class="relative pl-[5px]">
+                                            <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                            <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col" class="p-[12px]">
+                                    <div class="flex">
+                                        Status
+                                        <div class="relative pl-[5px]">
+                                            <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                            <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col" class="p-[12px]">
+                                    <div class="flex">
+                                        Price
+                                        <div class="relative pl-[5px]">
+                                            <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                            <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col" class="p-[12px]">
+                                    <div class="flex">
+                                        Created On
+                                        <div class="relative pl-[5px]">
+                                            <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                            <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                        </div>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in allbookingrequest)
+                            {
+                                <tr class="bg-white border-b ">
+                                    <td class="p-[12px]">
+                                        @item.Id
+                                    </td>
+                                    <td class="p-[12px]">
+                                        @item.CustomerName
+                                    </td>
+                                    <td class="p-[12px]">
+                                        <div class="plan-a">@item.PlanName</div>
+                                    </td>
+                                    <td class="p-[12px]">
+                                        @item.People
+                                    </td>
+                                    <td class="p-[12px]">
+                                        1
+                                    </td>
+                                    <td class="p-[12px]">
+                                        @item.VisitedDate
+                                    </td>
+                                    <td class="p-[12px]">
+                                        @item.VisitedTime
+                                    </td>
+                                    <td class="p-[12px]">
+                                        <div class="approved">
+                                            @item.Status
+
+                                        </div>
+                                    </td>
+                                    <td class="p-[12px]">
+                                        ¥@item.Price
+                                    </td>
+                                    <td class="p-[12px]">
+                                        @item.CreatedDate
+                                    </td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination-club">
+                    <div class="show-entry">Showing 1 to 5 of 301 Entries</div>
+                    <div class="flex gap-[12px]">
+                        <div class="btn btn-secondary-box-shadow ">Previous</div>
+                        <div class="flex gap-[12px]">
+                            <div class="pagination-number active">
+                                1
+                            </div>
+                            <div class="pagination-number">
+                                2
+                            </div>
+                            <div class="pagination-number">
+                                3
+                            </div>
+                            <div class="pagination-number">
+                                ..
+                            </div>
+                            <div class="pagination-number">
+                                10
+                            </div>
+                        </div>
+                        <div class="btn btn-secondary-box-shadow ">Next</div>
+                    </div>
+                </div>
+            </div>
+            <div id="tab2" class="tab-content-plane table-tab hidden">
+                <!--aproved tab section-->
+                <div class="px-[16px] py-[12px] flex justify-between entry-export-container">
+                    <div class="flex items-center">
+                        show&nbsp;<select id="countries" class="select-entires">
+                            <option value="5" selected>5</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                        </select>&nbsp;entries
+                    </div>
+                    <div class="export-button">
+                        <img src="~/Content/assets/images/club/download-solid.svg" /> export
+                    </div>
+
+                </div>
+
+                <div class="relative overflow-x-auto">
+                    <!--approved booking request table grid section-->
+                    <table class="w-full  text-left club-table">
+                        <thead class="club-table-thead">
+                            <tr>
+                                <th scope="col" class="p-[12px]">
+                                    <div class="flex">
+                                        S.N
+                                        <div class="relative pl-[5px]">
+                                            <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                            <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col" class="p-[12px]">
+                                    <div class="flex">
+                                        Customer
+                                        <div class="relative pl-[5px]">
+                                            <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                            <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col" class="p-[12px]">
+                                    <div class="flex">
+                                        Plan
+                                        <div class="relative pl-[5px]">
+                                            <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                            <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col" class="p-[12px]">
+                                    <div class="flex">
+                                        People
+                                        <div class="relative pl-[5px]">
+                                            <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                            <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col" class="p-[12px]">
+                                    <div class="flex">
+                                        No. of Hosts
+                                        <div class="relative pl-[5px]">
+                                            <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                            <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col" class="p-[12px]">
+                                    <div class="flex">
+                                        Visit Date
+                                        <div class="relative pl-[5px]">
+                                            <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                            <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col" class="p-[12px]">
+                                    <div class="flex">
+                                        Visit Time
+                                        <div class="relative pl-[5px]">
+                                            <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                            <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col" class="p-[12px]">
+                                    <div class="flex">
+                                        Status
+                                        <div class="relative pl-[5px]">
+                                            <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                            <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col" class="p-[12px]">
+                                    <div class="flex">
+                                        Price
+                                        <div class="relative pl-[5px]">
+                                            <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                            <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col" class="p-[12px]">
+                                    <div class="flex">
+                                        Created On
+                                        <div class="relative pl-[5px]">
+                                            <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                            <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                        </div>
+                                    </div>
+                                </th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in approvedbookingrequestlist)
+                            {
+                                <tr class="bg-white border-b ">
+                                    <td class="p-[12px]">
+                                        @item.Id
+                                    </td>
+                                    <td class="p-[12px]">
+                                        @item.CustomerName
+                                    </td>
+                                    <td class="p-[12px]">
+                                        <div class="plan-a">@item.PlanName</div>
+                                    </td>
+                                    <td class="p-[12px]">
+                                        @item.People
+                                    </td>
+                                    <td class="p-[12px]">
+                                        1
+                                    </td>
+                                    <td class="p-[12px]">
+                                        @item.VisitedDate
+                                    </td>
+                                    <td class="p-[12px]">
+                                        @item.VisitedTime
+                                    </td>
+                                    <td class="p-[12px]">
+                                        <div class="approved">
+                                            @item.Status
+
+                                        </div>
+                                    </td>
+                                    <td class="p-[12px]">
+                                        ¥@item.Price
+                                    </td>
+                                    <td class="p-[12px]">
+                                        @item.CreatedDate
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination-club">
+                    <div class="show-entry">Showing 1 to 5 of 301 Entries</div>
+                    <div class="flex gap-[12px]">
+                        <div class="btn btn-secondary-box-shadow ">Previous</div>
+                        <div class="flex gap-[12px]">
+                            <div class="pagination-number active">
+
+                                1
+                            </div>
+                            <div class="pagination-number">
+                                2
+                            </div>
+                            <div class="pagination-number">
+                                3
+                            </div>
+                            <div class="pagination-number">
+                                ..
+                            </div>
+                            <div class="pagination-number">
+                                10
+                            </div>
+
+                        </div>
+                        <div class="btn btn-secondary-box-shadow ">Next</div>
+                    </div>
+                </div>
+            </div>
+            <div id="tab3" class="tab-content-plane table-tab hidden">
+                <!--pending tab sections-->
+                <div class="px-[16px] py-[12px] flex justify-between entry-export-container">
+                    <div class="flex items-center">
+                        show&nbsp;<select id="countries" class="select-entires">
+                            <option value="5" selected>5</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                        </select>&nbsp;entries
+                    </div>
+                    <div class="export-button">
+                        <img src="~/Content/assets/images/club/download-solid.svg" /> export
+                    </div>
+
+                </div>
+
+                <div class="relative overflow-x-auto">
+                    <!--pending booking request table grid section-->
+                    <table class="w-full  text-left club-table">
+                        <thead class="club-table-thead">
+                            <tr>
+                                <th scope="col" class="p-[12px]">
+                                    <div class="flex">
+                                        S.N
+                                        <div class="relative pl-[5px]">
+                                            <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                            <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col" class="p-[12px]">
+                                    <div class="flex">
+                                        Customer
+                                        <div class="relative pl-[5px]">
+                                            <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                            <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col" class="p-[12px]">
+                                    <div class="flex">
+                                        Plan
+                                        <div class="relative pl-[5px]">
+                                            <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                            <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col" class="p-[12px]">
+                                    <div class="flex">
+                                        People
+                                        <div class="relative pl-[5px]">
+                                            <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                            <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col" class="p-[12px]">
+                                    <div class="flex">
+                                        No. of Hosts
+                                        <div class="relative pl-[5px]">
+                                            <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                            <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col" class="p-[12px]">
+                                    <div class="flex">
+                                        Visit Date
+                                        <div class="relative pl-[5px]">
+                                            <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                            <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col" class="p-[12px]">
+                                    <div class="flex">
+                                        Visit Time
+                                        <div class="relative pl-[5px]">
+                                            <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                            <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col" class="p-[12px]">
+                                    <div class="flex">
+                                        Status
+                                        <div class="relative pl-[5px]">
+                                            <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                            <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col" class="p-[12px]">
+                                    <div class="flex">
+                                        Price
+                                        <div class="relative pl-[5px]">
+                                            <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                            <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col" class="p-[12px]">
+                                    <div class="flex">
+                                        Created On
+                                        <div class="relative pl-[5px]">
+                                            <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                            <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col" class="p-[12px]">
+                                    <div class="flex">
+                                        Action
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in pendingbookingrequestlist)
+                            {
+                                <tr class="bg-white border-b ">
+                                    <td class="p-[12px]">
+                                        @item.Id
+                                    </td>
+                                    <td class="p-[12px]">
+                                        @item.CustomerName
+                                    </td>
+                                    <td class="p-[12px]">
+                                        <div class="plan-a">@item.PlanName</div>
+                                    </td>
+                                    <td class="p-[12px]">
+                                        @item.People
+                                    </td>
+                                    <td class="p-[12px]">
+                                        1
+                                    </td>
+                                    <td class="p-[12px]">
+                                        @item.VisitedDate
+                                    </td>
+                                    <td class="p-[12px]">
+                                        @item.VisitedTime
+                                    </td>
+                                    <td class="p-[12px]">
+                                        <div class="approved">
+                                            @item.Status
+
+                                        </div>
+                                    </td>
+                                    <td class="p-[12px]">
+                                        ¥@item.Price
+                                    </td>
+                                    <td class="p-[12px]">
+                                        @item.CreatedDate
+                                    </td>
+                                    <td class="p-[12px]">
+                                        <i class="fa-solid fa-check" onclick="approve('@item.Id')"> </i><i class="fa-solid fa-ban" onclick="reject('@item.Id')"></i>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination-club">
+                    <div class="show-entry">Showing 1 to 5 of 301 Entries</div>
+                    <div class="flex gap-[12px]">
+                        <div class="btn btn-secondary-box-shadow">Previous</div>
+                        <div class="flex gap-[12px]">
+                            <div class="pagination-number active">
+
+                                1
+                            </div>
+                            <div class="pagination-number">
+                                2
+                            </div>
+                            <div class="pagination-number">
+                                3
+                            </div>
+                            <div class="pagination-number">
+                                ..
+                            </div>
+                            <div class="pagination-number">
+                                10
+                            </div>
+
+                        </div>
+                        <div class="btn btn-secondary-box-shadow">Next</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- table --->
+</div>
+<!-- drawer component -->
+<!--Custom date section -->
+<!-- drawer component -->
+<div id="drawer-right-example"
+     class="fixed top-0 right-0 z-40 h-screen px-[32px] py-[48px] overflow-y-auto transition-transform translate-x-full bg-white w-[629px]"
+     tabindex="-1" aria-labelledby="drawer-right-label">
+
+    <div class="flex items-center justify-end">
+        <button type="button" data-drawer-hide="drawer-right-example" aria-controls="drawer-right-example" class=" ">
+            <img src="~/Content/assets/images/drawer-close.svg" />
+        </button>
+    </div>
+    <!--- calender --->
+
+    <div class="py-[32px] ">
+        <div class="flex justify-between pb-[24px] items-center text-base font-medium">
+            <div class="">Calendar</div>
+            <div class="flex gap-[12px] items-center">
+                <div class="flex h-[32px] w-[40px] justify-center items-center border border-[#D9D9D9] rounded-[4px]">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </div>
+                <div class="flex text-base font-medium">
+                    Aug - Sep
+                </div>
+                <div class="flex h-[32px] w-[40px] justify-center items-center border border-[#D9D9D9] rounded-[4px]">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+
+        </div>
+        <div class="grid gap-[12px]">
+            <div class="flex justify-between calender-card-container  ">
+                <div class="calender-card disabled">
+                    <div class="text-xs font-medium text-center">
+                        <div>SUN</div>
+                        <div> 30</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+
+                </div>
+                <div class="calender-card disabled">
+                    <div class="text-xs font-medium text-center">
+                        <div>MON</div>
+                        <div> 31</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card">
+                    <div class="text-xs font-medium text-center">
+                        <div>TUE</div>
+                        <div> 1</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card">
+                    <div class="text-xs font-medium text-center">
+                        <div>WEB</div>
+                        <div> 2</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card">
+                    <div class="text-xs font-medium text-center">
+                        <div>THU</div>
+                        <div> 3</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card active">
+                    <div class="text-xs font-medium text-center">
+                        <div>FRI</div>
+                        <div> 4</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card">
+                    <div class="text-xs font-medium text-center">
+                        <div>SAT</div>
+                        <div> 5</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-between calender-card-container  ">
+                <div class="calender-card ">
+                    <div class="text-xs font-medium text-center">
+                        <div>SUN</div>
+                        <div> 6</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+
+                </div>
+                <div class="calender-card ">
+                    <div class="text-xs font-medium text-center">
+                        <div>MON</div>
+                        <div>7</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card">
+                    <div class="text-xs font-medium text-center">
+                        <div>TUE</div>
+                        <div>8</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card">
+                    <div class="text-xs font-medium text-center">
+                        <div>WEB</div>
+                        <div>9</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card">
+                    <div class="text-xs font-medium text-center">
+                        <div>THU</div>
+                        <div>10</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card ">
+                    <div class="text-xs font-medium text-center">
+                        <div>FRI</div>
+                        <div>11</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card">
+                    <div class="text-xs font-medium text-center">
+                        <div>SAT</div>
+                        <div>12</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-between calender-card-container  ">
+                <div class="calender-card ">
+                    <div class="text-xs font-medium text-center">
+                        <div>SUN</div>
+                        <div>13</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+
+                </div>
+                <div class="calender-card ">
+                    <div class="text-xs font-medium text-center">
+                        <div>MON</div>
+                        <div>14</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card">
+                    <div class="text-xs font-medium text-center">
+                        <div>TUE</div>
+                        <div>15</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card">
+                    <div class="text-xs font-medium text-center">
+                        <div>WEB</div>
+                        <div>16</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card">
+                    <div class="text-xs font-medium text-center">
+                        <div>THU</div>
+                        <div>17</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card ">
+                    <div class="text-xs font-medium text-center">
+                        <div>FRI</div>
+                        <div>18</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card">
+                    <div class="text-xs font-medium text-center">
+                        <div>SAT</div>
+                        <div>19</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-between calender-card-container  ">
+                <div class="calender-card ">
+                    <div class="text-xs font-medium text-center">
+                        <div>SUN</div>
+                        <div>20</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+
+                </div>
+                <div class="calender-card ">
+                    <div class="text-xs font-medium text-center">
+                        <div>MON</div>
+                        <div>21</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card">
+                    <div class="text-xs font-medium text-center">
+                        <div>TUE</div>
+                        <div>22</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card">
+                    <div class="text-xs font-medium text-center">
+                        <div>WEB</div>
+                        <div>23</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card">
+                    <div class="text-xs font-medium text-center">
+                        <div>THU</div>
+                        <div>24</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card ">
+                    <div class="text-xs font-medium text-center">
+                        <div>FRI</div>
+                        <div>25</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card">
+                    <div class="text-xs font-medium text-center">
+                        <div>SAT</div>
+                        <div>26</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-between calender-card-container  ">
+                <div class="calender-card ">
+                    <div class="text-xs font-medium text-center">
+                        <div>SUN</div>
+                        <div>27</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+
+                </div>
+                <div class="calender-card ">
+                    <div class="text-xs font-medium text-center">
+                        <div>MON</div>
+                        <div>28</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card">
+                    <div class="text-xs font-medium text-center">
+                        <div>TUE</div>
+                        <div>29</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card">
+                    <div class="text-xs font-medium text-center">
+                        <div>WEB</div>
+                        <div>30</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card">
+                    <div class="text-xs font-medium text-center">
+                        <div>THU</div>
+                        <div>31</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card disabled">
+                    <div class="text-xs font-medium text-center">
+                        <div>FRI</div>
+                        <div>1</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card disabled">
+                    <div class="text-xs font-medium text-center">
+                        <div>SAT</div>
+                        <div>2</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex justify-end">
+        <div class="flex gap-[24px]">
+            <button class="btn btn-secondary "> Cancel</button>
+            <button class="btn btn-primary">
+                Confirm
+            </button>
+        </div>
+    </div>
+
+</div>
+<script>
+    function approve(id) {
+        $.ajax({
+            type: 'POST',
+            async: true,
+            url: "/BookingRequest/ApproveBookingRequest?id=" + id,
+            dataType: 'json',
+            data: {
+                __RequestVerificationToken: $('input[name="__RequestVerificationToken"]').val(),
+            },
+            success: function () {
+                window.location.href = "/BookingRequest/BookingRequestList";
+            },
+            error: function (ex) {
+            }
+        });
+    }
+    function reject(id) {
+        $.ajax({
+            type: 'POST',
+            async: true,
+            url: "/BookingRequest/RejectBookingRequest?id=" + id,
+            dataType: 'json',
+            data: {
+                __RequestVerificationToken: $('input[name="__RequestVerificationToken"]').val(),
+            },
+            success: function () {
+                window.location.href = "/BookingRequest/BookingRequestList";
+            },
+            error: function (ex) {
+            }
+        });
+    }
+</script>

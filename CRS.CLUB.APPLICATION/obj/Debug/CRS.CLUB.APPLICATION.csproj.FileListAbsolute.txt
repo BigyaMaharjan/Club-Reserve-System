@@ -1,0 +1,292 @@
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\CRS.CLUB.APPLICATION.dll.config
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\CRS.CLUB.APPLICATION.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\CRS.CLUB.APPLICATION.pdb
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Ja\CRS.CLUB.APPLICATION.resources.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\csc.exe
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\csc.exe.config
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\csc.rsp
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\csi.exe
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\csi.exe.config
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\csi.rsp
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.AppContext.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Console.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.IO.Compression.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Net.Http.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.ValueTuple.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\vbc.exe
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\vbc.exe.config
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\vbc.rsp
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\VBCSCompiler.exe
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Antlr3.Runtime.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Aspose.Cells.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\CRS.CLUB.BUSINESS.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\CRS.CLUB.SHARED.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\CSharp-easy-RSA-PEM.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\DocumentFormat.OpenXml.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Google.Api.Gax.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Google.Api.Gax.Rest.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Google.Apis.Auth.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Google.Apis.Auth.PlatformServices.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Google.Apis.Core.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Google.Apis.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Google.Apis.PlatformServices.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Microsoft.Extensions.Primitives.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Newtonsoft.Json.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Syncfusion.Compression.Base.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Syncfusion.Licensing.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Syncfusion.XlsIO.Base.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Buffers.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Collections.Immutable.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.IO.Pipelines.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Memory.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Numerics.Vectors.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Web.Helpers.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Web.Mvc.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Web.Optimization.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Web.Razor.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Web.WebPages.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Web.WebPages.Razor.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Unity.Abstractions.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Unity.Container.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Unity.Mvc.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\WebActivatorEx.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\WebGrease.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\CRS.CLUB.REPOSITORY.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\CRS.CLUB.BUSINESS.pdb
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\CRS.CLUB.SHARED.pdb
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\DocumentFormat.OpenXml.xml
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Google.Api.Gax.pdb
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Google.Api.Gax.xml
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Google.Api.Gax.Rest.pdb
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Google.Api.Gax.Rest.xml
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Google.Apis.pdb
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Google.Apis.xml
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Google.Apis.Auth.pdb
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Google.Apis.Auth.xml
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Google.Apis.Core.pdb
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Google.Apis.Core.xml
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Microsoft.AspNetCore.Http.Features.xml
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Microsoft.Extensions.Primitives.xml
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Newtonsoft.Json.xml
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Syncfusion.Compression.Base.xml
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Syncfusion.XlsIO.Base.xml
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Buffers.xml
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Collections.Immutable.xml
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.IO.Pipelines.xml
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Memory.xml
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Numerics.Vectors.xml
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Web.Helpers.xml
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Web.Mvc.xml
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Web.Optimization.xml
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Web.Razor.xml
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Web.WebPages.xml
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Web.WebPages.Razor.xml
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Unity.Abstractions.pdb
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Unity.Container.pdb
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Unity.Mvc.pdb
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Unity.Mvc.xml
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Antlr3.Runtime.pdb
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\bin\CRS.CLUB.REPOSITORY.pdb
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\obj\Debug\CRS.CLUB.APPLICATION.csproj.AssemblyReference.cache
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\obj\Debug\CRS.CLUB.APPLICATION.Resources.Resource.resources
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\obj\Debug\CRS.CLUB.APPLICATION.Resources.Resource.Ja.resources
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\obj\Debug\CRS.CLUB.APPLICATION.csproj.GenerateResource.cache
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\obj\Debug\CRS.CLUB.APPLICATION.csproj.CoreCompileInputs.cache
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\obj\Debug\Ja\CRS.CLUB.APPLICATION.resources.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\obj\Debug\CRS.CLUB.APPLICATION.csproj.CopyComplete
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\obj\Debug\CRS.CLUB.APPLICATION.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.APPLICATION\obj\Debug\CRS.CLUB.APPLICATION.pdb
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\CRS.CLUB.APPLICATION.dll.config
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\CRS.CLUB.APPLICATION.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\CRS.CLUB.APPLICATION.pdb
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Ja\CRS.CLUB.APPLICATION.resources.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\csc.exe
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\csc.exe.config
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\csc.rsp
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\csi.exe
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\csi.exe.config
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\csi.rsp
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\Microsoft.Managed.Core.targets
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.AppContext.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Collections.Immutable.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Console.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Globalization.Calendars.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.IO.Compression.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.IO.FileSystem.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Net.Http.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Net.Sockets.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Reflection.Metadata.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.ValueTuple.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Xml.XmlDocument.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Xml.XPath.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\vbc.exe
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\vbc.exe.config
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\vbc.rsp
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\VBCSCompiler.exe
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\roslyn\VBCSCompiler.exe.config
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Antlr3.Runtime.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Aspose.Cells.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\CRS.CLUB.BUSINESS.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\CRS.CLUB.SHARED.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\CSharp-easy-RSA-PEM.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\DocumentFormat.OpenXml.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Google.Api.Gax.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Google.Api.Gax.Rest.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Google.Apis.Auth.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Google.Apis.Auth.PlatformServices.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Google.Apis.Core.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Google.Apis.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Google.Apis.PlatformServices.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Microsoft.AspNetCore.Http.Features.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Microsoft.Extensions.Primitives.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Microsoft.IO.RecyclableMemoryStream.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Microsoft.Web.Infrastructure.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Newtonsoft.Json.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Syncfusion.Compression.Base.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Syncfusion.Licensing.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Syncfusion.XlsIO.Base.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Buffers.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Collections.Immutable.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.IO.Pipelines.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Memory.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Numerics.Vectors.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Threading.Tasks.Extensions.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Web.Helpers.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Web.Mvc.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Web.Optimization.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Web.Razor.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Web.WebPages.Deployment.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Web.WebPages.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Web.WebPages.Razor.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Unity.Abstractions.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Unity.Container.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Unity.Mvc.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\WebActivatorEx.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\WebGrease.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\CRS.CLUB.REPOSITORY.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\CRS.CLUB.BUSINESS.pdb
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\CRS.CLUB.SHARED.pdb
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\DocumentFormat.OpenXml.xml
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Google.Api.Gax.pdb
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Google.Api.Gax.xml
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Google.Api.Gax.Rest.pdb
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Google.Api.Gax.Rest.xml
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Google.Apis.pdb
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Google.Apis.xml
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Google.Apis.Auth.pdb
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Google.Apis.Auth.xml
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Google.Apis.Core.pdb
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Google.Apis.Core.xml
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Microsoft.AspNetCore.Http.Features.xml
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Microsoft.Extensions.Primitives.xml
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Microsoft.IO.RecyclableMemoryStream.xml
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Newtonsoft.Json.xml
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Syncfusion.Compression.Base.xml
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Syncfusion.XlsIO.Base.xml
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Buffers.xml
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Collections.Immutable.xml
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.IO.Pipelines.xml
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Memory.xml
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Numerics.Vectors.xml
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Threading.Tasks.Extensions.xml
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Web.Helpers.xml
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Web.Mvc.xml
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Web.Optimization.xml
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Web.Razor.xml
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Web.WebPages.xml
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Web.WebPages.Deployment.xml
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\System.Web.WebPages.Razor.xml
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Unity.Abstractions.pdb
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Unity.Container.pdb
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Unity.Mvc.pdb
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Unity.Mvc.xml
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Antlr3.Runtime.pdb
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\bin\CRS.CLUB.REPOSITORY.pdb
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\obj\Debug\CRS.CLUB.APPLICATION.csproj.AssemblyReference.cache
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\obj\Debug\CRS.CLUB.APPLICATION.Resources.Resource.resources
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\obj\Debug\CRS.CLUB.APPLICATION.Resources.Resource.Ja.resources
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\obj\Debug\CRS.CLUB.APPLICATION.csproj.GenerateResource.cache
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\obj\Debug\CRS.CLUB.APPLICATION.csproj.CoreCompileInputs.cache
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\obj\Debug\Ja\CRS.CLUB.APPLICATION.resources.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\obj\Debug\CRS.CLUB.APPLICATION.csproj.CopyComplete
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\obj\Debug\CRS.CLUB.APPLICATION.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.APPLICATION\obj\Debug\CRS.CLUB.APPLICATION.pdb

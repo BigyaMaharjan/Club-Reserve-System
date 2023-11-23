@@ -1,0 +1,8 @@
+﻿@{
+    ViewBag.Title = "Gallary Management";
+}
+
+<div>
+    @Html.AntiForgeryToken()
+    @Html.Raw(ViewData["gridHost"].ToString())
+</div>

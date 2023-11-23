@@ -1,0 +1,150 @@
+﻿@model CRS.CLUB.APPLICATION.Models.ReservationValidationManagement.ReservationDetailViaOTPModel
+@{
+    ViewBag.Title = "Customer Validation Confirmation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="flex flex-col gap-[32px] pb-4">
+    <!-- booking information  -->
+    <div class="title-info grid gap-[20px]">
+        <div>
+            <div class="heading-title">Customer Validation</div>
+            <div class="span-title-light-gray">
+                Validate Customer’s Reservation by entering OTP code that has been sent
+                to email address.
+            </div>
+        </div>
+    </div>
+    <div class="px-[32px]">
+        @using (Html.BeginForm("CustomerValidationConfirmation", "ReservationValidationManagement", FormMethod.Post, new { @role = "form", @id = "MyForm" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(model => model.OTPCode)
+            @Html.HiddenFor(model => model.ReservationId)
+            <div class="w-[400px] pb-[16px]">
+                <div class="input-field-common">
+                    <input type="text" class=" w-full" placeholder="Enter OTP from Customer" required value="@Model.OTPCode" disabled>
+                </div>
+            </div>
+            <div class="flex gap-[16px]">
+                @if (!string.IsNullOrEmpty(Model.TransactionStatus) && Model.TransactionStatus.Trim().ToUpper() != "APPROVED")
+                {
+                    <button class="btn btn-primary" onclick="SubmitFunction()">Continue</button>
+                }
+                <button class="btn btn-secondary" type="button" onclick="ClearFunction()">Clear</button>
+            </div>
+        }
+    </div>
+
+    <div class="px-[32px] ">
+        <div class="reservation-container">
+            <div class="reservation-header flex justify-between items-center">
+                <div class="title">Reservation Details</div>
+                <button class="btn btn-primary-normal">
+                    <img src='~/Content/assets/images/download-solid-active.svg' /> Download
+                </button>
+            </div>
+            <div class="reservation-details ">
+                <div class="left-reservation-details">
+                    <div class="list-container">
+                        <div class="title">
+                            RESERVATION NUMBER
+                        </div>
+                        <div class="label">
+                            @Model.InvoiceId
+                        </div>
+                    </div>
+                    <div class="list-container">
+                        <div class="title">
+                            STORE INFORMATION
+                        </div>
+                        <div class="label">
+                            @Model.StoreName
+                        </div>
+                    </div>
+                    <div class="list-container">
+                        <div class="title">
+                            PLAN
+                        </div>
+                        <div class="label approved gap-1">
+                            <img src="~/Content/assets/images/crown-solid.svg" />
+                            @Model.PlanName
+                        </div>
+                    </div>
+                    <div class="list-container">
+                        <div class="title">
+                            Status
+                        </div>
+                        <div class="label approved gap-1">
+                            <img src="~/Content/assets/images/check-circle-solid.svg" />
+                            @Model.TransactionStatus
+                        </div>
+                    </div>
+                    <div class="list-container">
+                        <div class="title">
+                            DATE
+                        </div>
+                        <div class="label">
+                            @Model.VisitDateTime
+                        </div>
+                    </div>
+
+                </div>
+                <div class="right-reservation-details">
+                    <div class="list-container">
+                        <div class="title">
+                            Verification Status
+                        </div>
+                        <div class="label approved gap-1">
+                            <img src="~/Content/assets/images/check-circle-solid.svg" />
+                            @Model.OTPVerificationStatus
+                        </div>
+                    </div>
+                    <div class="list-container">
+                        <div class="title">
+                            Location
+                        </div>
+                        <div class="label">
+                            @Model.LocationName
+                        </div>
+                    </div>
+                    <div class="list-container">
+                        <div class="title">
+                            Payment method
+                        </div>
+                        <div class="label">
+                            @Model.PaymentType
+                        </div>
+                    </div>
+                    <div class="list-container">
+                        <div class="title">
+                            Host
+                        </div>
+                        <div class="label grid gap-[12px] grid-cols-3">
+                            @foreach (var item in Model.ReservationHostListModel)
+                            {
+                                <div class="round-image-text">
+                                    <img class="w-[28px] h-[28px] rounded-full"
+                                         src="~/Content/assets/images/demo-image.jpeg" />
+                                    <div class="text-image">
+                                        @item.HostName
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts
+{
+    <script>
+        function SubmitFunction() {
+            document.getElementById('MyForm').submit();
+        };
+        function ClearFunction() {
+            window.location.href = '@Url.Action("CustomerValidation", "ReservationValidationManagement")';
+        };
+    </script>
+}

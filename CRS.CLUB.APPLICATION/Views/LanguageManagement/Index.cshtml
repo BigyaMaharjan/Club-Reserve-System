@@ -1,0 +1,169 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="flex items-center border-t-[2px] border-t-[#C8B477] sticky top-0 bg-white z-[10] relative px-4 py-[10px] h-[44px]">
+    <div class="flex gap-2 items-center absolute top-[12px] left-4 text-sm">
+        <svg xmlns="http://www.w3.org/2000/svg"
+             width="22" height="23" viewBox="0 0 22 23" fill="none">
+            <path d="M15.2352 3.24084C14.786 2.79167 14.0618 2.79167 13.6127 3.24084L5.99518 10.8583C5.63768 11.2158 5.63768 11.7933 5.99518 12.1508L13.6127 19.7683C14.0618 20.2175 14.786 20.2175 15.2352 19.7683C15.6843 19.3192 15.6843 18.595 15.2352 18.1458L8.59851 11.5L15.2443 4.85417C15.6843 4.41417 15.6843 3.68084 15.2352 3.24084Z"
+                  fill="#BCB08A" />
+        </svg> 閉じる
+    </div>
+    <div class="text-center w-full ">Langauge</div>
+
+</div>
+
+<div class="px-4 py-[16px] grid border-t border-[#EFEFEF] ">
+    <div class="font-[700]">Select Language</div>
+    <div class="pt-[16px] grid gap-4">
+        <div class="language-option active">
+            <div class="flex flex-row w-full justify-between ">
+                <div class="flex items-center ">
+                    <svg class="mr-[12px]" xmlns="http://www.w3.org/2000/svg" width="27" height="18" viewBox="0 0 27 18"
+                         fill="none">
+                        <g clip-path="url(#clip0_5569_5129)">
+                            <path d="M26.4706 0H0V18H26.4706V0Z" fill="white" />
+                            <path d="M13.2355 14.4C16.1594 14.4 18.5296 11.9823 18.5296 9.00001C18.5296 6.01767 16.1594 3.60001 13.2355 3.60001C10.3117 3.60001 7.94141 6.01767 7.94141 9.00001C7.94141 11.9823 10.3117 14.4 13.2355 14.4Z"
+                                  fill="#BC002D" />
+                        </g>
+                        <rect x="0.5" y="0.5" width="25.4706" height="17" stroke="#F8F8F8" />
+                        <defs>
+                            <clipPath id="clip0_5569_5129">
+                                <rect width="26.4706" height="18" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <p class="lang" data-lang="Ja">
+                        Japanese
+
+                    </p>
+
+                </div>
+
+                <div class="flex flex-row items-center">
+                    <div class="circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                            <path d="M11 5C7.688 5 5 7.688 5 11C5 14.312 7.688 17 11 17C14.312 17 17 14.312 17 11C17 7.688 14.312 5 11 5ZM11 15.8C8.354 15.8 6.2 13.646 6.2 11C6.2 8.354 8.354 6.2 11 6.2C13.646 6.2 15.8 8.354 15.8 11C15.8 13.646 13.646 15.8 11 15.8Z"
+                                  fill="#ECECEC" />
+                        </svg>
+                    </div>
+                    <div class="circle-active">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                            <path d="M11 5C7.688 5 5 7.688 5 11C5 14.312 7.688 17 11 17C14.312 17 17 14.312 17 11C17 7.688 14.312 5 11 5ZM11 15.8C8.354 15.8 6.2 13.646 6.2 11C6.2 8.354 8.354 6.2 11 6.2C13.646 6.2 15.8 8.354 15.8 11C15.8 13.646 13.646 15.8 11 15.8Z"
+                                  fill="#ECECEC" />
+                            <path d="M11 7C8.792 7 7 8.792 7 11C7 13.208 8.792 15 11 15C13.208 15 15 13.208 15 11C15 8.792 13.208 7 11 7Z"
+                                  fill="#D75A8B" />
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="language-option">
+            <div class="flex flex-row w-full justify-between ">
+                <div class="flex items-center ">
+                    <svg class="mr-[12px]" xmlns="http://www.w3.org/2000/svg" width="27" height="18" viewBox="0 0 27 18"
+                         fill="none">
+                        <mask id="mask0_5569_5266" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="-5" y="0"
+                              width="37" height="18">
+                            <path d="M-4.76465 0V18H31.2354V0H-4.76465Z" fill="white" />
+                        </mask>
+                        <g mask="url(#mask0_5569_5266)">
+                            <path d="M-4.76465 0V18H31.2354V0H-4.76465Z" fill="#012169" />
+                            <path d="M-4.76465 0L31.2354 18L-4.76465 0ZM31.2354 0L-4.76465 18L31.2354 0Z"
+                                  fill="black" />
+                            <path d="M-4.76465 0L31.2354 18M31.2354 0L-4.76465 18" stroke="white" stroke-width="3.6" />
+                            <mask id="mask1_5569_5266" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="-5"
+                                  y="0" width="37" height="18">
+                                <path d="M13.2354 9H31.2354V18L13.2354 9ZM13.2354 9V18H-4.76465L13.2354 9ZM13.2354 9H-4.76465V0L13.2354 9ZM13.2354 9V0H31.2354L13.2354 9Z"
+                                      fill="white" />
+                            </mask>
+                            <g mask="url(#mask1_5569_5266)">
+                                <path d="M-4.76465 0L31.2354 18L-4.76465 0ZM31.2354 0L-4.76465 18L31.2354 0Z"
+                                      fill="black" />
+                                <path d="M-4.76465 0L31.2354 18M31.2354 0L-4.76465 18" stroke="#C8102E"
+                                      stroke-width="2.4" />
+                            </g>
+                            <path d="M13.2354 0V18V0ZM-4.76465 9H31.2354H-4.76465Z" fill="black" />
+                            <path d="M13.2354 0V18M-4.76465 9H31.2354" stroke="white" stroke-width="6" />
+                            <path d="M13.2354 0V18V0ZM-4.76465 9H31.2354H-4.76465Z" fill="black" />
+                            <path d="M13.2354 0V18M-4.76465 9H31.2354" stroke="#C8102E" stroke-width="3.6" />
+                        </g>
+                    </svg>
+                    <p class="lang" data-lang="en">
+                        English
+                    </p>
+
+                </div>
+
+                <div class="flex flex-row items-center">
+                    <div class="circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                            <path d="M11 5C7.688 5 5 7.688 5 11C5 14.312 7.688 17 11 17C14.312 17 17 14.312 17 11C17 7.688 14.312 5 11 5ZM11 15.8C8.354 15.8 6.2 13.646 6.2 11C6.2 8.354 8.354 6.2 11 6.2C13.646 6.2 15.8 8.354 15.8 11C15.8 13.646 13.646 15.8 11 15.8Z"
+                                  fill="#ECECEC" />
+                        </svg>
+                    </div>
+                    <div class="circle-active">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                            <path d="M11 5C7.688 5 5 7.688 5 11C5 14.312 7.688 17 11 17C14.312 17 17 14.312 17 11C17 7.688 14.312 5 11 5ZM11 15.8C8.354 15.8 6.2 13.646 6.2 11C6.2 8.354 8.354 6.2 11 6.2C13.646 6.2 15.8 8.354 15.8 11C15.8 13.646 13.646 15.8 11 15.8Z"
+                                  fill="#ECECEC" />
+                            <path d="M11 7C8.792 7 7 8.792 7 11C7 13.208 8.792 15 11 15C13.208 15 15 13.208 15 11C15 8.792 13.208 7 11 7Z"
+                                  fill="#D75A8B" />
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    // Get all the div elements
+    var divs = document.querySelectorAll('.language-option');
+
+    function handleLanguageSelection(lang) {
+    console.log("Selected language: " + lang);
+    $.ajax({
+        url: "/LanguageManagement/ChangeLanguage?lang=" + lang,
+        method: "GET",
+        success: function(data) {
+            // Handle the response from the controller if needed
+            // You can add code to update the page based on the response if necessary
+            },
+        error: function (xhr, status, error) {
+            // Handle any errors that may occur during the AJAX request
+            }
+        });
+    }
+
+    // Add click event listeners to each div
+    divs.forEach(function (div) {
+        div.addEventListener('click', function () {
+            // Remove the 'bg-red' class from all divs
+            divs.forEach(function (d) {
+                d.classList.remove('active');
+
+            });
+            // Add the 'bg-red' class to the clicked div
+            this.classList.add('active');
+
+            var lang = $(".language-option.active p.lang").data('lang');
+
+            // Handle the language selection
+            handleLanguageSelection(lang);
+
+        });
+    });
+
+    // Set the default language (e.g., "Ja") and call the function with the default value
+    var defaultLang = "Ja";
+    handleLanguageSelection(defaultLang);
+
+</script>

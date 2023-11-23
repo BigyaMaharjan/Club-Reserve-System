@@ -1,0 +1,641 @@
+﻿@{
+    ViewBag.Title = "Club Management";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="flex flex-col gap-[32px] pb-4">
+    <!-- booking information  -->
+    <div class="title-info flex justify-between gap-[20px]">
+        <div>
+            <div class="heading-title">Club Management</div>
+            <div class="span-title-light-gray">Supporting Texts</div>
+        </div>
+    </div>
+    <div class="px-[32px]">
+        <div class="flex gap-[24px]" style="border-bottom: 1px solid #f4f4f4;">
+            <div class="flex tab-container-plane bg-white gap-[16px]">
+                <button id="tab1Button" class="tab-button-plane tab-link ">Gallery Management</button>
+                <button id="tab2Button" class="tab-button-plane tab-link ">Host Management</button>
+                <button id="tab3Button" class="tab-button-plane tab-link ">Event Management</button>
+                <button id="tab4Button" class="tab-button-plane tab-link active">Schedule Management</button>
+            </div>
+        </div>
+    </div>
+    <div class="px-[32px]">
+        <div class="bg-white">
+            <div id="tab1" class="tab-content-plane hidden">
+                @Html.Partial("_GallaryManagement")
+            </div>
+            <div id="tab2" class="tab-content-plane hidden ">
+                @Html.Partial("_HostManagement")
+            </div>
+            <div id="tab3" class="tab-content-plane hidden ">
+                @Html.Partial("_EventManagement")
+            </div>
+            <div id="tab4" class="tab-content-plane ">
+                <?php include("./schedule.php") ?>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section scripts{
+    <script>
+        function checkImage(event) {
+            debugger
+            event.preventDefault();
+            const imageInput = document.getElementById("file_input");
+            const file = imageInput.files[0];
+            const Title = $('.editTitle').val();
+            if (Title == null || Title == "") {
+                $('span[data-valmsg-for="Title"]').addClass("field-validation-valid text-danger");
+                $('span[data-valmsg-for="Title"]').addClass("field-validation-error text-danger").html("Title is required");
+                event.preventDefault();
+                return false;
+            }
+            else {
+                $('span[data-valmsg-for="Title"]').addClass("field-validation-valid");
+                $('span[data-valmsg-for="Title"]').addClass("field-validation-error").html("");
+            }
+            if (file == null || file == "") {
+                $('span[data-valmsg-for="ImageFile"]').addClass("field-validation-valid text-danger");
+                $('span[data-valmsg-for="ImageFile"]').addClass("field-validation-error text-danger").html("HEIF image file is required");
+                event.preventDefault();
+                return false;
+            }
+            else {
+                $('span[data-valmsg-for="ImageFile"]').addClass("field-validation-valid");
+                $('span[data-valmsg-for="ImageFile"]').addClass("field-validation-error").html("");
+            }
+            if (file != null && Title != null) {
+                const allowedExtensions = ['heif'];
+                const fileExtension = file.name.split('.').pop().toLowerCase();
+
+                if (allowedExtensions.includes(fileExtension)) {
+                    const maxFileSize = 5 * 1024 * 1024; // 5MB
+                    if (file.size <= maxFileSize) {
+                        var jsonData = new FormData();
+                        var fileInput = $('.imageInput')[0];
+                        var check = fileInput.files[0];
+                        if (fileInput.files.length > 0) {
+                            jsonData.append('imageFile', fileInput.files[0]);
+                            jsonData.append('title', Title);
+                            $.ajax({
+                                type: 'POST',
+                                url: '/ClubManagement/AddClubImage',
+                                data: jsonData,
+                                contentType: false,
+                                processData: false,
+                                success: function (response) {
+                                    console.log(response);
+                                },
+                                error: function (error) {
+                                    console.error('Error:', error);
+                                }
+                            });
+
+                        } else {
+                            alert('Please select an image first.');
+                        }
+                        location.reload();
+                        return true;
+                    } else {
+                        $('span[data-valmsg-for="ImageFile"]').addClass("field-validation-valid text-danger");
+                        $('span[data-valmsg-for="ImageFile"]').addClass("field-validation-error text-danger").html("Image Size is too large");
+                        event.preventDefault();
+                        return false;
+                    }
+                } else {
+                    $('span[data-valmsg-for="ImageFile"]').addClass("field-validation-valid text-danger");
+                    $('span[data-valmsg-for="ImageFile"]').addClass("field-validation-error text-danger").html("Invalid image file format. Allowed formats HEIF");
+                    event.preventDefault();
+                    return false;
+                }
+            }
+        }
+
+        function EcheckImage(event) {
+            debugger
+            event.preventDefault();
+            const imageInput = document.getElementById("file_input");
+            const file = imageInput.files[0];
+            const Title = $('.editTitle2').val();
+            const AgentID = $('#EAgentID').val();
+            const Sno = $('#ESNO').val();
+            if (Title == null || Title == "") {
+                $('span[data-valmsg-for="Title"]').addClass("field-validation-valid text-danger");
+                $('span[data-valmsg-for="Title"]').addClass("field-validation-error text-danger").html("Title is required");
+                event.preventDefault();
+                return false;
+            }
+            else {
+                $('span[data-valmsg-for="Title"]').addClass("field-validation-valid");
+                $('span[data-valmsg-for="Title"]').addClass("field-validation-error").html("");
+            }
+            if (file == null || file == "") {
+                $('span[data-valmsg-for="ImageFile"]').addClass("field-validation-valid text-danger");
+                $('span[data-valmsg-for="ImageFile"]').addClass("field-validation-error text-danger").html("HEIF image file is required");
+                event.preventDefault();
+                return false;
+            }
+            else {
+                $('span[data-valmsg-for="ImageFile"]').addClass("field-validation-valid");
+                $('span[data-valmsg-for="ImageFile"]').addClass("field-validation-error").html("");
+            }
+            if (file != null && Title != null) {
+                const allowedExtensions = ['heif'];
+                const fileExtension = file.name.split('.').pop().toLowerCase();
+
+                if (allowedExtensions.includes(fileExtension)) {
+                    const maxFileSize = 5 * 1024 * 1024; // 5MB
+                    if (file.size <= maxFileSize) {
+                        var jsonData = new FormData();
+                        var fileInput = $('.imageInput')[0];
+                        var check = fileInput.files[0];
+                        if (fileInput.files.length > 0) {
+                            jsonData.append('imageFile', fileInput.files[0]);
+                            jsonData.append('title', Title);
+                            jsonData.append('Sno', Sno);
+                            jsonData.append('AgentID', AgentID);
+                            $.ajax({
+                                type: 'POST',
+                                url: '/ClubManagement/AddClubImage',
+                                data: jsonData,
+                                contentType: false,
+                                processData: false,
+                                success: function (response) {
+                                    debugger;
+                                    location.reload();
+                                    console.log(response);
+                                },
+                                error: function (error) {
+                                    location.reload();
+                                    console.error('Error:', error);
+                                }
+                            });
+
+                        } else {
+                            alert('Please select an image first.');
+                        }
+                        location.reload();
+                        return true;
+                    } else {
+                        $('span[data-valmsg-for="ImageFile"]').addClass("field-validation-valid text-danger");
+                        $('span[data-valmsg-for="ImageFile"]').addClass("field-validation-error text-danger").html("Image Size is too large");
+                        event.preventDefault();
+                        return false;
+                    }
+                } else {
+                    $('span[data-valmsg-for="ImageFile"]').addClass("field-validation-valid text-danger");
+                    $('span[data-valmsg-for="ImageFile"]').addClass("field-validation-error text-danger").html("Invalid image file format. Allowed formats HEIF");
+                    event.preventDefault();
+                    return false;
+                }
+            }
+        }
+
+        $(".EditDetail").on("click", function (e) {
+            var id = $(this).attr("id");
+            var agentId = $(".agentid_" + id).text();
+            var sno = $(".sno_" + id).text();
+            var agentId1 = $(".agentid_" + id);
+            var valueAtIndex0 = agentId1.get(0);
+            var innerTextValueAgent = $(valueAtIndex0).text();
+            var sno1 = $(".sno_" + id);
+            var valueAtIndexSn0 = sno1.get(0);
+            var innerTextValueSno = $(valueAtIndexSn0).text();
+
+            if (agentId != null && sno != null) {
+                $.ajax({
+                    url: '/ClubManagement/EditClubManagement',
+                    method: 'POST',
+                    data: { AgentId: innerTextValueAgent, clubsno: innerTextValueSno },
+                    success: function (data) {
+                        debugger
+                        if (data != null || data != "") {
+                            var Galtitle = data.model.Title.toString();
+                            var GalImage = data.model.ImagePath.toString();
+                            var SNOID = data.model.ClubSno.toString();
+                            var AgID = data.model.AgentId.toString();
+                            $(".editTitle2").val(Galtitle);
+                            $(".fileNameDisplay").val(GalImage);
+                            $("#EAgentID").val(AgID);
+                            $("#ESNO").val(SNOID);
+                            $("#edit-gallery").fadeIn();
+                            return true;
+                        }
+                    },
+                    error: function (error) {
+                        // Handle AJAX errors here
+                    }
+                });
+            }
+        });
+
+        $(".editCancel").on("click", function () {
+            debugger;
+            $(".editTitle").val(" ");
+            $("#edit-gallery").fadeOut();
+        });
+
+        function checkImageHost(event) {
+            debugger;
+            const imageInputHost = document.getElementById("checkForm");
+            const file = imageInputHost.files[0];
+            var Hname = $('#HostName').val();
+            var position = $('#Position').val();
+            var rank = $('.rank').val();
+            var Twitter = $('#Twitter').val();
+            var Instagram = $('#Instagram').val();
+            var TikTok = $('#TikTok').val();
+            var year = $('.year').val();
+            var month = $('.month').val();
+            var day = $('.day').val();
+            var Constellation = $('.Constellation').val();
+            var BloodType = $('.BloodType').val();
+            var PreviousOccupation = $('.PreviousOccupation').val();
+            var Liquor = $('.Liquor').val();
+            var Date = year + "-" + month + "-" + day
+            if (file != null) {
+                const allowedExtensions = ['heif'];
+                const fileExtension = file.name.split('.').pop().toLowerCase();
+
+                if (allowedExtensions.includes(fileExtension)) {
+                    const maxFileSize = 5 * 1024 * 1024; // 5MB
+                    if (file.size <= maxFileSize) {
+                        var jsonData = new FormData();
+                        var fileInput = $('.HostImage')[0];
+                        var check = fileInput.files[0];
+                        if (fileInput.files.length > 0) {
+                            jsonData.append('HostImage', fileInput.files[0]);
+                            jsonData.append('HostName', Hname);
+                            jsonData.append('Position', position);
+                            jsonData.append('Rank', rank);
+                            jsonData.append('Twitter', Twitter);
+                            jsonData.append('Instagram', Instagram);
+                            jsonData.append('TikTok', TikTok);
+                            jsonData.append('Constellation', Constellation);
+                            jsonData.append('BloodType', BloodType);
+                            jsonData.append('PreviousOccupation', PreviousOccupation);
+                            jsonData.append('Liquor', Liquor);
+                            jsonData.append('Age', Date);
+                            $.ajax({
+                                type: 'POST',
+                                url: '/ClubManagement/AddClubHost',
+                                data: jsonData,
+                                contentType: false,
+                                processData: false,
+                                success: function (response) {
+                                    console.log(response);
+                                },
+                                error: function (error) {
+                                    console.error('Error:', error);
+                                }
+                            });
+
+                        } else {
+                            alert('Please select an image first.');
+                        }
+                        return true;
+                    } else {
+                        event.preventDefault();
+                        return false;
+                    }
+                } else {
+                    event.preventDefault();
+                    return false;
+                }
+            }
+            else {
+                event.preventDefault();
+                return false;
+            }
+        }
+
+        $(".EditEventDetail").on("click", function (e) {
+            debugger;
+            var id = $(this).attr("id");
+            var agentId = $(".agentid_" + id).text();
+            var sno = $("#event_" + id).text();
+            var agentId1 = $(".agentid_" + id);
+            var valueAtIndex0 = agentId1.get(0);
+            var innerTextValueAgent = $(valueAtIndex0).text();
+            var sno1 = $(".sno_" + id);
+            var valueAtIndexSn0 = sno1.get(1);
+            var innerTextValueSno = $(valueAtIndexSn0).text();
+
+            if (agentId != null && sno != null) {
+                $.ajax({
+                    url: '/ClubManagement/EditEventManagement',
+                    method: 'POST',
+                    data: { AgentId: innerTextValueAgent, EventId: sno },
+                    success: function (Evdata) {
+                        debugger;
+                        if (Evdata != null || Evdata != "") {
+                            var EvTitle = Evdata.model.EventTitle.toString();
+                            var EvDescription = Evdata.model.Description.toString();
+                            var EvDate = Evdata.model.EventDate.toString();
+                            var EvID = Evdata.model.EventId.toString();
+                            var AgID = Evdata.model.AgentId.toString();
+                            var dateFromDb = EvDate;
+                            var eventDateInput = document.getElementById("eventDateInput");
+                            eventDateInput.value = dateFromDb;
+
+                            $(".editEventTitle").val(EvTitle);
+                            $(".editEventDescription").val(EvDescription);
+                            $("#EAgentID").val(AgID);
+                            $("#EEventID").val(EvID);
+                            $("#edit-event").fadeIn();
+                            return true;
+                        }
+                    },
+                    error: function (error) {
+                        // Handle AJAX errors here
+                    }
+                });
+            }
+        });
+
+        $(".ModifyCancel").on("click", function () {
+            $(".editEventDate").val(" ");
+            $(".editEventDescription").val(" ");
+            $(".editEventTitle").val(" ");
+            $("#edit-event").fadeOut();
+        });
+
+        function checkVal() {
+            debugger;
+            var evDate = $("#eventDateInput").val();
+            let evTitle = $('#evTitle').val();
+            let evDescription = $('#evDesc').val();
+            if (evTitle.length <= 0) {
+                $('span[data-valmsg-for="EventTitle"]').addClass("field-validation-valid text-danger");
+                $('span[data-valmsg-for="EventTitle"]').addClass("field-validation-error text-danger").html("Event Title is required");
+            }
+            else {
+                $('span[data-valmsg-for="EventTitle"]').addClass("field-validation-valid");
+                $('span[data-valmsg-for="EventTitle"]').addClass("field-validation-error").html(" ");
+            }
+            if (evDate.length <= 0) {
+                $('span[data-valmsg-for="EventDate"]').addClass("field-validation-valid text-danger");
+                $('span[data-valmsg-for="EventDate"]').addClass("field-validation-error text-danger").html("Event Date is required");
+            }
+            else {
+                $('span[data-valmsg-for="EventDate"]').addClass("field-validation-valid");
+                $('span[data-valmsg-for="EventDate"]').addClass("field-validation-error").html(" ");
+            }
+            if (evDescription.length <= 0) {
+                $('span[data-valmsg-for="Description"]').addClass("field-validation-valid text-danger");
+                $('span[data-valmsg-for="Description"]').addClass("field-validation-error text-danger").html("Description is required");
+            }
+            else {
+                $('span[data-valmsg-for="Description"]').addClass("field-validation-valid");
+                $('span[data-valmsg-for="Description"]').addClass("field-validation-error").html(" ");
+            }
+        }
+
+        function checkValAdd() {
+            debugger;
+            var evDate = $("#addDate").val();
+            let evTitle = $('#addEventT').val();
+            let evDescription = $('#addDescription').val();
+            if (evTitle.length <= 0) {
+                $('span[data-valmsg-for="EventTitle"]').addClass("field-validation-valid text-danger");
+                $('span[data-valmsg-for="EventTitle"]').addClass("field-validation-error text-danger").html("Event Title is required");
+            }
+            else {
+                $('span[data-valmsg-for="EventTitle"]').addClass("field-validation-valid");
+                $('span[data-valmsg-for="EventTitle"]').addClass("field-validation-error").html(" ");
+            }
+            if (evDate.length <= 0) {
+                $('span[data-valmsg-for="EventDate"]').addClass("field-validation-valid text-danger");
+                $('span[data-valmsg-for="EventDate"]').addClass("field-validation-error text-danger").html("Event Date is required");
+            }
+            else {
+                $('span[data-valmsg-for="EventDate"]').addClass("field-validation-valid");
+                $('span[data-valmsg-for="EventDate"]').addClass("field-validation-error").html(" ");
+            }
+            if (evDescription.length <= 0) {
+                $('span[data-valmsg-for="Description"]').addClass("field-validation-valid text-danger");
+                $('span[data-valmsg-for="Description"]').addClass("field-validation-error text-danger").html("Description is required");
+            }
+            else {
+                $('span[data-valmsg-for="Description"]').addClass("field-validation-valid");
+                $('span[data-valmsg-for="Description"]').addClass("field-validation-error").html(" ");
+            }
+        }
+
+        function checkValGal() {
+            debugger;
+            let GalTitle = $('#GalTitle').val();
+            let GalImage = $('#file_input').val();
+            if (GalTitle.length <= 0) {
+                $('span[data-valmsg-for="Title"]').addClass("field-validation-valid text-danger");
+                $('span[data-valmsg-for="Title"]').addClass("field-validation-error text-danger").html("Title is required");
+            }
+            else {
+                $('span[data-valmsg-for="Title"]').addClass("field-validation-valid");
+                $('span[data-valmsg-for="Title"]').addClass("field-validation-error").html(" ");
+            }
+            if (GalImage.length <= 0) {
+                $('span[data-valmsg-for="ImageFile"]').addClass("field-validation-valid text-danger");
+                $('span[data-valmsg-for="ImageFile"]').addClass("field-validation-error text-danger").html("Image is required");
+            }
+            else {
+                $('span[data-valmsg-for="ImageFile"]').addClass("field-validation-valid");
+                $('span[data-valmsg-for="ImageFile"]').addClass("field-validation-error").html(" ");
+            }
+        }
+
+        function checkModGal() {
+            debugger;
+            let GalTitle = $('#ETTitle').val();
+            let GalImage = $('#file_input').val();
+            if (GalTitle.length <= 0) {
+                $('span[data-valmsg-for="Title"]').addClass("field-validation-valid text-danger");
+                $('span[data-valmsg-for="Title"]').addClass("field-validation-error text-danger").html("Title is required");
+            }
+            else {
+                $('span[data-valmsg-for="Title"]').addClass("field-validation-valid");
+                $('span[data-valmsg-for="Title"]').addClass("field-validation-error").html(" ");
+            }
+            if (GalImage.length <= 0) {
+                $('span[data-valmsg-for="ImageFile"]').addClass("field-validation-valid text-danger");
+                $('span[data-valmsg-for="ImageFile"]').addClass("field-validation-error text-danger").html("Image is required");
+            }
+            else {
+                $('span[data-valmsg-for="ImageFile"]').addClass("field-validation-valid");
+                $('span[data-valmsg-for="ImageFile"]').addClass("field-validation-error").html(" ");
+            }
+        }
+
+        $(".EditHostDetail").on("click", function (e) {
+            debugger;
+            var id = $(this).attr("id");
+            var agentId = $(".agentid_" + id).text();
+            var sno = $(".sno_" + id).text();
+            var agentId1 = $(".agentid_" + id);
+            var valueAtIndex0 = agentId1.get(1);
+            var innerTextValueAgent = $(valueAtIndex0).text();
+            var sno1 = $(".sno_" + id);
+            var valueAtIndexSn0 = sno1.get(1);
+            var innerTextValueSno = $(valueAtIndexSn0).text();
+
+            if (agentId != null && sno != null) {
+                $.ajax({
+                    url: '/ClubManagement/EditHostManagement',
+                    method: 'POST',
+                    data: { AgentId: innerTextValueAgent, HostId: innerTextValueSno },
+                    success: function (Evdata) {
+                        debugger;
+                        if (Evdata != null || Evdata != "") {
+                            var HoName = Evdata.model.HostName.toString();
+                            var PositionE = Evdata.model.Position.toString();
+                            var X = Evdata.model.Twitter.toString();
+                            var Inst = Evdata.model.Instagram.toString();
+                            var Tik = Evdata.model.TikTok.toString();
+                            //var DOB = Evdata.model.DateOfBirth.toString();
+                            //var Hei = Evdata.model.Height.toString();
+                            //var Liq = Evdata.model.Liquor.toString();
+                            //var Cons = Evdata.model.Constellation.toString();
+                            var BloTyp = Evdata.model.BloodType.toString();
+                            var PreOcc = Evdata.model.PreviousOccupation.toString();
+                            var ConstGrp = Evdata.model.ConstellationGroup.toString();
+                            var AgID = Evdata.model.AgentID.toString();
+                            var EvID = Evdata.model.HostID.toString();
+                            //var dateFromDb = Evdata.model.Age.toString();
+                            //var eventDateInput = document.getElementById("eventDateInput");
+                            //eventDateInput.value = dateFromDb;
+
+                            $(".HName").val(HoName);
+                            $(".Position").val(PositionE);
+                            //$(".rank").val(rank);
+                            $(".TURL").val(X);
+                            $(".IURL").val(Inst);
+                            $(".TIURL").val(Tik);
+                            //$(".imageInput2").val(EvDescription);
+                            $(".Constellation").val(ConstGrp);
+                            //$(".heignt").val(Hei);
+                            $(".BloodType").val(BloTyp);
+                            $(".PreviousOccupation").val(PreOcc);
+                            //$(".Liquor").val(Liq);
+                            $("#EHAgentID").val(AgID);
+                            $("#EHostID").val(EvID);
+                            $("#edit-host").fadeIn();
+                            return true;
+                        }
+                    },
+                    error: function (error) {
+                        // Handle AJAX errors here
+                    }
+                });
+            }
+        });
+
+        function EditImageHost(event) {
+            debugger;
+            const imageInputHost = document.getElementById("imageInput3");
+            const file = imageInputHost.files[0];
+            var HostID = $('#EHostID').val();
+            var Hname = $('.EHName').val();
+            var position = $('.EPosition').val();
+            var rank = $('.Erank').val();
+            var Twitter = $('.TURL').val();
+            var Instagram = $('.IURL').val();
+            var TikTok = $('.TIURL').val();
+            var year = $('.Eyear').val();
+            var month = $('.Emonth').val();
+            var day = $('.Eday').val();
+            var Constellation = $('.EConstellation').val();
+            var BloodType = $('.EBloodType').val();
+            var PreviousOccupation = $('.EPreviousOccupation').val();
+            var Liquor = $('.ELiquor').val();
+            var Date = year + "-" + month + "-" + day
+            if (file != null) {
+                const allowedExtensions = ['heif'];
+                const fileExtension = file.name.split('.').pop().toLowerCase();
+
+                if (allowedExtensions.includes(fileExtension)) {
+                    const maxFileSize = 5 * 1024 * 1024; // 5MB
+                    if (file.size <= maxFileSize) {
+                        var jsonData = new FormData();
+                        var fileInput = $('.imageInput3')[0];
+                        var check = fileInput.files[0];
+                        if (fileInput.files.length > 0) {
+                            jsonData.append('HostImage', fileInput.files[0]);
+                            jsonData.append('HostName', Hname);
+                            jsonData.append('Position', position);
+                            jsonData.append('Rank', rank);
+                            jsonData.append('Twitter', Twitter);
+                            jsonData.append('Instagram', Instagram);
+                            jsonData.append('TikTok', TikTok);
+                            jsonData.append('Constellation', Constellation);
+                            jsonData.append('BloodType', BloodType);
+                            jsonData.append('PreviousOccupation', PreviousOccupation);
+                            jsonData.append('Liquor', Liquor);
+                            jsonData.append('HostID', HostID);
+                            jsonData.append('Age', Date);
+                            $.ajax({
+                                type: 'POST',
+                                url: '/ClubManagement/AddClubHost',
+                                data: jsonData,
+                                contentType: false,
+                                processData: false,
+                                success: function (response) {
+                                    console.log(response);
+                                },
+                                error: function (error) {
+                                    console.error('Error:', error);
+                                }
+                            });
+
+                        } else {
+                            alert('Please select an image first.');
+                        }
+                        return true;
+                    } else {
+                        event.preventDefault();
+                        return false;
+                    }
+                } else {
+                    event.preventDefault();
+                    return false;
+                }
+            }
+            else {
+                event.preventDefault();
+                return false;
+            }
+        }
+
+        $(document).ready(function () {
+            // Attach a click event handler to the link
+            $("a[href^='/ClubManagement/EditClubManagement']").on("click", function (event) {
+                debugger;
+                event.preventDefault(); // Prevent the default link behavior
+
+                // Get the href attribute of the clicked link
+                var href = $(this).attr("href");
+
+                // Extract the agentid and sno values from the href
+                var agentidMatch = href.match(/AgentId=(\d+)/);
+                var snoMatch = href.match(/clubsno=(\d+)/);
+
+                if (agentidMatch && snoMatch) {
+                    var agentid = agentidMatch[1];
+                    var sno = snoMatch[1];
+
+                    // Log or use the agentid and sno values as needed
+                    console.log("AgentId: " + agentid);
+                    console.log("Sno: " + sno);
+                } else {
+                    console.log("AgentId or Sno not found in the href attribute.");
+                }
+            });
+        });
+
+
+    </script>
+}

@@ -1,0 +1,649 @@
+﻿
+@{
+    ViewBag.Title = "Reservation Ledger";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var reservationLedgerDetailList = ViewBag.ReservationLedgerListDetail;
+}
+
+<div class="flex flex-col gap-[32px] pb-4">
+    <!-- booking information  -->
+    <div class="title-info flex justify-between gap-[20px] items-end">
+        <div>
+            <div class="heading-title">Reservation Ledger</div>
+            <div class="span-title-light-gray">Supporting Texts</div>
+        </div>
+        <div class="btn btn-primary-normal gap-[8px]" data-drawer-target="drawer-right-calender"
+             data-drawer-show="drawer-right-calender" data-drawer-placement="right"
+             aria-controls="drawer-right-calender">
+            <i class="fa-solid fa-calendar-days text-[16px]"></i>
+            View Calendar
+        </div>
+    </div>
+    <div class="px-[32px]">
+        <div class="flex gap-[24px]" style="border-bottom: 1px solid #f4f4f4;">
+            <div class="flex tab-container-plane bg-white gap-[16px]">
+                <button id="tab1Button" class="tab-button-plane tab-link active">Overview</button>
+                <button id="tab2Button" class="tab-button-plane tab-link ">Reservations</button>
+            </div>
+        </div>
+    </div>
+    <div class="px-[32px]">
+        <div class="bg-white">
+            <div id="tab1" class="tab-content-plane ">
+                <!--Overview tab section-->
+                <div class="grid gap-[32px]">
+                    <div class="payment-details flex gap-[45px]">
+                        <div class="payment-details-card w-[268px]">
+                            <div class="title flex gap-[8px] mb-[12px] items-center">
+                                <div class="logo h-[32px] w-[32px] flex justify-center items-center rounded-full bg-[#FDE0EB]">
+                                    <img src="~/Content/assets/images/payment-booking.svg" />
+                                </div>
+                                <div class="text-lg font-semibold">Total Bookings</div>
+                            </div>
+                            <div class="text-2xl font-semibold">
+                                301
+                            </div>
+                            <div class="flex justify-between mb-[6.5px]">
+                                <p class="text-xs  text-[#7A7A7A]">Approved: <span class="text-[#3E3E3E]">103</span></p>
+                                <p class="text-xs  text-[#EF4444]">Pending: <span class="text-[#EF4444]">99</span></p>
+                            </div>
+                            <hr class="bg-[#F4F4F4] mb-[12px]" />
+
+                            <div class="text-center text-xs cursor-pointer text-[#1C2434]">
+                                View all <i class="las la-angle-right"></i>
+                            </div>
+                        </div>
+                        <div class="payment-details-card w-[268px] flex justify-between flex-col ">
+                            <div>
+                                <div class="title flex gap-[8px] mb-[12px] items-center">
+                                    <div class="logo h-[32px] w-[32px] flex justify-center
+                    items-center rounded-full bg-[#FEEAD8]">
+                                        <i class="las la-user-friends text-lg text-[#F89336]"></i>
+                                    </div>
+                                    <div class="text-lg font-semibold">Total Visitors</div>
+                                </div>
+                                <div class="text-2xl font-semibold">
+                                    209
+                                </div>
+                            </div>
+                            <div>
+                                <hr class="bg-[#F4F4F4] mb-[12px]" />
+                                <div class="text-center text-xs cursor-pointer text-[#1C2434]">
+                                    View all <i class="las la-angle-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="payment-details-card w-[268px] flex justify-between flex-col ">
+                            <div>
+                                <div class="title flex gap-[8px] mb-[12px] items-center">
+                                    <div class="logo h-[32px] w-[32px] flex justify-center items-center rounded-full bg-[#C4F7C6]">
+                                        <i class="las la-trophy text-lg text-[#027A48]"></i>
+                                    </div>
+                                    <div class="text-lg font-semibold">Premium</div>
+                                </div>
+                                <div class="text-2xl font-semibold">
+                                    90
+                                </div>
+                            </div>
+                            <div>
+                                <hr class="bg-[#F4F4F4] mb-[12px]" />
+                                <div class="text-center text-xs cursor-pointer text-[#1C2434]">
+                                    View all <i class="las la-angle-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tab2" class="tab-content-plane hidden ">
+                <!--reservation tab section-->
+                <div class="table-tab">
+                    <div class="px-[16px] py-[12px] flex justify-between entry-export-container">
+                        <div class="flex items-center">
+                            show&nbsp;<select id="countries" class="select-entires">
+                                <option value="5" selected>5</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                                <option value="20">100</option>
+                            </select>&nbsp;entries
+                        </div>
+                        <div class="export-button">
+                            <img src="~/Content/assets/images/club/download-solid.svg" /> export
+                        </div>
+                    </div>
+                    <div class="relative overflow-x-auto">
+                        <table class="w-full  text-left club-table">
+                            <thead class="club-table-thead">
+                                <tr>
+                                    <th scope="col" class="p-[12px]">
+                                        <div class="flex">
+                                            S.N
+                                            <div class="relative pl-[5px]">
+                                                <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                                <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="p-[12px]">
+                                        <div class="flex">
+                                            Customer
+                                            <div class="relative pl-[5px]">
+                                                <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                                <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="p-[12px]">
+                                        <div class="flex">
+                                            Plan
+                                            <div class="relative pl-[5px]">
+                                                <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                                <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="p-[12px]">
+                                        <div class="flex">
+                                            People <div class="relative pl-[5px]">
+                                                <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                                <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="p-[12px]">
+                                        <div class="flex">
+                                            Visit Date<div class="relative pl-[5px]">
+                                                <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                                <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="p-[12px]">
+                                        <div class="flex">
+                                            Visit Time<div class="relative pl-[5px]">
+                                                <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                                <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="p-[12px]">
+                                        <div class="flex">
+                                            Payment Option<div class="relative pl-[5px]">
+                                                <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                                <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="p-[12px]">
+                                        <div class="flex ">
+                                            Commission
+                                            <div class="relative pl-[5px]">
+                                                <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                                <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="p-[12px]">
+                                        <div class="flex ">
+                                            Admin Pay ment
+                                            <div class="relative pl-[5px]">
+                                                <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                                <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                                            </div>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    int i = 1;
+                                    foreach (var item in reservationLedgerDetailList)
+                                    {
+                                        <tr class="bg-white border-b ">
+                                            <td class="p-[12px]">
+                                                @i
+                                            </td>
+                                            <td class="p-[12px]">
+                                                <div class="round-image-text gap-[12px]">
+                                                    <img class="w-[32px] h-[32px] rounded-full" src="~@item.CustomerProfileImage" />
+                                                    <div class="text-image">
+                                                        @item.CustomerName
+                                                        <p>@item.NickName</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="p-[12px]">
+                                                <div class="plan-a">
+                                                    @item.PlanName
+                                                </div>
+                                            </td>
+                                            <td class="p-[12px]">
+                                                @item.People
+
+                                            </td>
+                                            <td class="p-[12px]">
+                                                @item.VisitedDate
+                                            </td>
+                                            <td class="p-[12px]">
+                                                @item.VisitedTime
+                                            </td>
+                                            <td class="p-[12px]">
+                                                <div class="pending">@item.PaymentOption</div>
+                                            </td>
+                                            <td class="p-[12px]">
+                                                ¥@item.Commission
+                                            </td>
+                                            <td class="p-[12px]">
+                                                <div class="text-[#1976D2]">
+                                                    ¥@item.AdminPayment
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        i++;
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="pagination-club">
+                        <div class="show-entry">Showing 1 to 5 of 301 Entries</div>
+                        <div class="flex gap-[12px]">
+                            <div class="btn btn-secondary-box-shadow ">Previous</div>
+                            <div class="flex gap-[12px]">
+                                <div class="pagination-number active">
+
+                                    1
+                                </div>
+                                <div class="pagination-number">
+                                    2
+                                </div>
+                                <div class="pagination-number">
+                                    3
+                                </div>
+                                <div class="pagination-number">
+                                    ..
+                                </div>
+                                <div class="pagination-number">
+                                    10
+                                </div>
+
+                            </div>
+                            <div class="btn btn-secondary-box-shadow ">Next</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--caleder section-->
+<!-- drawer component -->
+<div id="drawer-right-calender"
+     class="fixed top-0 right-0 z-40 h-screen px-[32px] py-[48px] overflow-y-auto transition-transform translate-x-full bg-white w-[629px] dark:bg-gray-800"
+     tabindex="-1" aria-labelledby="drawer-right-label">
+
+    <div class="flex items-center justify-end">
+        <button type="button" data-drawer-hide="drawer-right-calender" aria-controls="drawer-right-calender" class=" ">
+            <img src="~/Content/assets/images/drawer-close.svg" />
+        </button>
+    </div>
+    <!--- calender --->
+    <div class="py-[32px] ">
+        <div class="flex justify-between pb-[24px] items-center text-base font-medium">
+            <div class="">Calendar</div>
+            <div class="flex gap-[12px] items-center">
+                <div class="flex h-[32px] w-[40px] justify-center items-center border border-[#D9D9D9] rounded-[4px]">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </div>
+                <div class="flex text-base font-medium">
+                    Aug - Sep
+                </div>
+                <div class="flex h-[32px] w-[40px] justify-center items-center border border-[#D9D9D9] rounded-[4px]">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+
+        </div>
+        <div class="grid gap-[12px]">
+            <div class="flex justify-between calender-card-container  ">
+                <div class="calender-card disabled">
+                    <div class="text-xs font-medium text-center">
+                        <div>SUN</div>
+                        <div> 30</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+
+                </div>
+                <div class="calender-card disabled">
+                    <div class="text-xs font-medium text-center">
+                        <div>MON</div>
+                        <div> 31</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card">
+                    <div class="text-xs font-medium text-center">
+                        <div>TUE</div>
+                        <div> 1</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card">
+                    <div class="text-xs font-medium text-center">
+                        <div>WEB</div>
+                        <div> 2</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card">
+                    <div class="text-xs font-medium text-center">
+                        <div>THU</div>
+                        <div> 3</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card active">
+                    <div class="text-xs font-medium text-center">
+                        <div>FRI</div>
+                        <div> 4</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card">
+                    <div class="text-xs font-medium text-center">
+                        <div>SAT</div>
+                        <div> 5</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-between calender-card-container  ">
+                <div class="calender-card ">
+                    <div class="text-xs font-medium text-center">
+                        <div>SUN</div>
+                        <div> 6</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+
+                </div>
+                <div class="calender-card ">
+                    <div class="text-xs font-medium text-center">
+                        <div>MON</div>
+                        <div>7</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card">
+                    <div class="text-xs font-medium text-center">
+                        <div>TUE</div>
+                        <div>8</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card">
+                    <div class="text-xs font-medium text-center">
+                        <div>WEB</div>
+                        <div>9</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card">
+                    <div class="text-xs font-medium text-center">
+                        <div>THU</div>
+                        <div>10</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card ">
+                    <div class="text-xs font-medium text-center">
+                        <div>FRI</div>
+                        <div>11</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card">
+                    <div class="text-xs font-medium text-center">
+                        <div>SAT</div>
+                        <div>12</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-between calender-card-container  ">
+                <div class="calender-card ">
+                    <div class="text-xs font-medium text-center">
+                        <div>SUN</div>
+                        <div>13</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+
+                </div>
+                <div class="calender-card ">
+                    <div class="text-xs font-medium text-center">
+                        <div>MON</div>
+                        <div>14</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card">
+                    <div class="text-xs font-medium text-center">
+                        <div>TUE</div>
+                        <div>15</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card">
+                    <div class="text-xs font-medium text-center">
+                        <div>WEB</div>
+                        <div>16</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card">
+                    <div class="text-xs font-medium text-center">
+                        <div>THU</div>
+                        <div>17</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card ">
+                    <div class="text-xs font-medium text-center">
+                        <div>FRI</div>
+                        <div>18</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card">
+                    <div class="text-xs font-medium text-center">
+                        <div>SAT</div>
+                        <div>19</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-between calender-card-container  ">
+                <div class="calender-card ">
+                    <div class="text-xs font-medium text-center">
+                        <div>SUN</div>
+                        <div>20</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+
+                </div>
+                <div class="calender-card ">
+                    <div class="text-xs font-medium text-center">
+                        <div>MON</div>
+                        <div>21</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card">
+                    <div class="text-xs font-medium text-center">
+                        <div>TUE</div>
+                        <div>22</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card">
+                    <div class="text-xs font-medium text-center">
+                        <div>WEB</div>
+                        <div>23</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card">
+                    <div class="text-xs font-medium text-center">
+                        <div>THU</div>
+                        <div>24</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card ">
+                    <div class="text-xs font-medium text-center">
+                        <div>FRI</div>
+                        <div>25</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card">
+                    <div class="text-xs font-medium text-center">
+                        <div>SAT</div>
+                        <div>26</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-between calender-card-container  ">
+                <div class="calender-card ">
+                    <div class="text-xs font-medium text-center">
+                        <div>SUN</div>
+                        <div>27</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+
+                </div>
+                <div class="calender-card ">
+                    <div class="text-xs font-medium text-center">
+                        <div>MON</div>
+                        <div>28</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card">
+                    <div class="text-xs font-medium text-center">
+                        <div>TUE</div>
+                        <div>29</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card">
+                    <div class="text-xs font-medium text-center">
+                        <div>WEB</div>
+                        <div>30</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card">
+                    <div class="text-xs font-medium text-center">
+                        <div>THU</div>
+                        <div>31</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card disabled">
+                    <div class="text-xs font-medium text-center">
+                        <div>FRI</div>
+                        <div>1</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+                <div class="calender-card disabled">
+                    <div class="text-xs font-medium text-center">
+                        <div>SAT</div>
+                        <div>2</div>
+                    </div>
+                    <div class="calender-number">
+                        12
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex justify-end">
+        <div class="flex gap-[24px]">
+            <button class="btn btn-secondary "> Cancel</button>
+            <button class="btn btn-primary">
+                Confirm
+            </button>
+        </div>
+    </div>
+</div>
+

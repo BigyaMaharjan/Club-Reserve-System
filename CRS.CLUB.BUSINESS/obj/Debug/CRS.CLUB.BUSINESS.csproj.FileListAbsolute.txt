@@ -1,0 +1,64 @@
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\CRS.CLUB.BUSINESS.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\CRS.CLUB.BUSINESS.pdb
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\Aspose.Cells.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\CRS.CLUB.REPOSITORY.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\CRS.CLUB.SHARED.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\ExcelEngine.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\Syncfusion.Compression.Base.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\Syncfusion.Licensing.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\Syncfusion.XlsIO.Base.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\System.Buffers.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\System.Memory.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\CRS.CLUB.REPOSITORY.pdb
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\CRS.CLUB.SHARED.pdb
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\Syncfusion.Compression.Base.xml
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\Syncfusion.XlsIO.Base.xml
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\System.Buffers.xml
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\System.Memory.xml
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.BUSINESS\obj\Debug\CRS.CLUB.BUSINESS.csproj.AssemblyReference.cache
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.BUSINESS\obj\Debug\CRS.CLUB.BUSINESS.csproj.CoreCompileInputs.cache
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.BUSINESS\obj\Debug\CRS.CLUB.BUSINESS.csproj.CopyComplete
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.BUSINESS\obj\Debug\CRS.CLUB.BUSINESS.dll
+C:\Users\Prashant Shrestha\Documents\Projects\MyPersonal\JapProject\CRS.CLUB\CRS.CLUB.BUSINESS\obj\Debug\CRS.CLUB.BUSINESS.pdb
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\CRS.CLUB.BUSINESS.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\CRS.CLUB.BUSINESS.pdb
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\Aspose.Cells.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\CRS.CLUB.REPOSITORY.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\CRS.CLUB.SHARED.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\DocumentFormat.OpenXml.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\ExcelEngine.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\Syncfusion.Compression.Base.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\Syncfusion.Licensing.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\Syncfusion.XlsIO.Base.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\System.Buffers.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\System.Memory.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\System.Numerics.Vectors.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\Newtonsoft.Json.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\CRS.CLUB.REPOSITORY.pdb
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\CRS.CLUB.SHARED.pdb
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\DocumentFormat.OpenXml.xml
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\Syncfusion.Compression.Base.xml
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\Syncfusion.XlsIO.Base.xml
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\System.Buffers.xml
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\System.Memory.xml
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\System.Numerics.Vectors.xml
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.BUSINESS\bin\Debug\Newtonsoft.Json.xml
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.BUSINESS\obj\Debug\CRS.CLUB.BUSINESS.csproj.AssemblyReference.cache
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.BUSINESS\obj\Debug\CRS.CLUB.BUSINESS.csproj.CoreCompileInputs.cache
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.BUSINESS\obj\Debug\CRS.CLUB.BUSINESS.csproj.CopyComplete
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.BUSINESS\obj\Debug\CRS.CLUB.BUSINESS.dll
+D:\MY FILES\Shinigami Work\New folder\CRS.CLUB\CRS.CLUB\CRS.CLUB.BUSINESS\obj\Debug\CRS.CLUB.BUSINESS.pdb

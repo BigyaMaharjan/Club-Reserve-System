@@ -1,0 +1,1002 @@
+﻿@model CRS.CLUB.APPLICATION.Models.ClubManagement.ClubModel
+
+<div class="flex justify-between pb-[24px]">
+    <form>
+        <div class="relative input-search-wrapper">
+            <div class="absolute inset-y-0 left-0 flex items-center pl-[16px] pointer-events-none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                    <path d="M17.5 18L13.875 14.375M15.8333 9.66667C15.8333 13.3486 12.8486 16.3333 9.16667 16.3333C5.48477 16.3333 2.5 13.3486 2.5 9.66667C2.5 5.98477 5.48477 3 9.16667 3C12.8486 3 15.8333 5.98477 15.8333 9.66667Z"
+                          stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+            <input type="search" class="input-search block w-full " placeholder="Search" required>
+        </div>
+    </form>
+    <div class="btn btn-primary gap-[8px]" data-drawer-target="add-new-host" data-drawer-show="add-new-host"
+         data-drawer-placement="right" data-drawer-backdrop="false" aria-controls="drawer-disabled-backdrop">
+        <img src="~/Content/assets/images/plus-circle-solid.svg" />
+        New Host
+    </div>
+</div>
+<div class="table-tab">
+    <div class="px-[16px] py-[12px] flex justify-between entry-export-container">
+        <div class="flex items-center">
+            show&nbsp;<select id="countries" class="select-entires">
+                <option value="5" selected>5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">100</option>
+            </select>&nbsp;entries
+        </div>
+        <div class="export-button">
+            <img src="~/Content/assets/images/club/download-solid.svg" /> export
+        </div>
+    </div>
+    <div class="relative overflow-x-auto">
+        <table class="w-full  text-left club-table">
+            <thead class="club-table-thead">
+                <tr>
+                    <th scope="col" class="p-[12px]">
+                        <div class="flex">
+                            S.N
+                            <div class="relative pl-[5px]">
+                                <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                            </div>
+                        </div>
+                    </th>
+                    <th scope="col" class="p-[12px]">
+                        <div class="flex">
+                            Host Info
+                            <div class="relative pl-[5px]">
+                                <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                            </div>
+                        </div>
+                    </th>
+                    <th scope="col" class="p-[12px]">
+                        <div class="flex">
+                            Date of Birth
+                            <div class="relative pl-[5px]">
+                                <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                            </div>
+                        </div>
+                    </th>
+                    <th scope="col" class="p-[12px]">
+                        <div class="flex">
+                            Zodiac Sign <div class="relative pl-[5px]">
+                                <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                            </div>
+                        </div>
+                    </th>
+
+                    <th scope="col" class="p-[12px]">
+                        <div class="flex">
+                            Rank<div class="relative pl-[5px]">
+                                <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                            </div>
+                        </div>
+                    </th>
+                    <th scope="col" class="p-[12px]">
+                        <div class="flex">
+                            No. of Show<div class="relative pl-[5px]">
+                                <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                            </div>
+                        </div>
+                    </th>
+                    <th scope="col" class="p-[12px]">
+                        <div class="flex">
+                            Commission<div class="relative pl-[5px]">
+                                <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                            </div>
+                        </div>
+                    </th>
+                    <th scope="col" class="p-[12px]">
+                        <div class="flex justify-center">
+                            Action
+                            <div class="relative pl-[5px]">
+                                <i class="fa-solid fa-chevron-up text-[8px] absolute top-[2px] text-[#545659]"></i>
+                                <i class="fa-solid fa-chevron-down text-[8px] absolute top-[8px] let-[5px] text-[#c3b6b9]"></i>
+                            </div>
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    var i = 1;
+                }
+                @foreach (var item in ViewData["gridHost"] as IEnumerable<CRS.CLUB.APPLICATION.Models.ClubManagement.HostManagement>)
+                {
+                    <tr class="bg-white border-b ">
+                        <td class="p-[12px]">
+                            @i
+                        </td>
+                        <td class="p-[12px]">
+                            <div class="round-image-text gap-[12px]">
+                                <img class="w-[32px] h-[32px] rounded-full" src="~/Content/assets/images/demo-image.jpeg" />
+                                <div class="text-image">
+                                    @item.HostName
+                                    <p>@item.Email</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="p-[12px]">
+                            @item.Age
+                        </td>
+                        <td class="p-[12px]">
+                            @item.ConstellationGroup
+                        </td>
+                        <td class="p-[12px]">
+                            @item.Rank
+                        </td>
+                        <td class="p-[12px]">
+                            @item.ActionUser
+                        </td>
+                        <td class="p-[12px]">
+                            ¥11,234
+                        </td>
+
+                        <td class="p-[12px]">
+                            <div class="flex gap-[7px] justify-center ">
+                                <div class="EditHostDetail" data-drawer-target="edit-host" data-drawer-show="edit-host"
+                                     data-drawer-backdrop="false" aria-controls="drawer-disabled-backdrop" id="@i">
+                                    <i class="fa-regular fa-pen-to-square text-[#989898] cursor-pointer"></i>
+                                    <div class="agentid_@i" id="@i" style="display: none;">@item.AgentID</div>
+                                    <div class="sno_@i" id="@i" style="display: none;">@item.HostID</div>
+                                </div>
+                                <div>
+                                    <a href="/ClubManagement/DeleteHostManagement?AgentId=@item.AgentID&HostId=@item.HostID"><i class="fa-solid fa-trash-can text-primary-100 cursor-pointer"></i></a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    i++;
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="pagination-club">
+        <div class="show-entry">Showing 1 to 5 of 301 Entries</div>
+        <div class="flex gap-[12px]">
+            <div class="btn btn-secondary-box-shadow ">Previous</div>
+            <div class="flex gap-[12px]">
+                <div class="pagination-number active">
+                    1
+                </div>
+                <div class="pagination-number">
+                    2
+                </div>
+                <div class="pagination-number">
+                    3
+                </div>
+                <div class="pagination-number">
+                    ..
+                </div>
+                <div class="pagination-number">
+                    10
+                </div>
+            </div>
+            <div class="btn btn-secondary-box-shadow ">Next</div>
+        </div>
+    </div>
+</div>
+
+<!-- drawer component -->
+<div id="add-new-host"
+     class="drawer-close-disable  flex justify-end fixed top-0 right-0 z-40 h-screen overflow-y-auto transition-transform translate-x-full  dark:bg-gray-800"
+     tabindex="-1" aria-labelledby="drawer-right-label">
+    <div class="bg-white w-[574px] drawer-container relative">
+        <div class="drawer-form-container sticky top-0 ">
+            <div class="drawer-form flex justify-between bg-secondary-color-pink py-[16px] px-[24px] h-[56px]">
+                <div>Manage Host</div>
+                <button type="button" data-drawer-hide="add-new-host" aria-controls="add-new-host" class="text-[20px]">
+                    <i class="las la-window-close text-white"></i>
+                </button>
+            </div>
+        </div>
+        <div class="p-[24px]">
+            @using (Html.BeginForm("AddClubHost", "ClubManagement", new { }, FormMethod.Post, new { @role = "form", @id = "UploadForm", enctype = "multipart/form-data" }))
+            {
+                <div class="grid grid-cols-2 gap-x-[20px] gap-y-[16px]">
+                    <div class="input-field-common">
+                        <label for="email"
+                               class="block mb-[12px] text-sm font-medium text-secondary-100 dark:text-white">
+                            Your
+                            Host Name
+                        </label>
+                        <input type="text" class="w-full" placeholder="Host Name" name="HostName" id="HostName" required oninput="AddValidationBox()">
+                        <span class="error">@Html.ValidationMessageFor(model => model.HostName)</span>
+                    </div>
+                    <div class="input-field-common">
+                        <label for="email"
+                               class="block mb-[12px] text-sm font-medium text-secondary-100 dark:text-white">
+                            Your
+                            Position
+                        </label>
+                        <input type="text" class="w-full " placeholder="Position" id="Position" name="Position" required oninput="AddValidationBox()">
+                        <span class="error">@Html.ValidationMessageFor(model => model.Position)</span>
+                    </div>
+                    <div class="input-field-common">
+                        <label for="email"
+                               class="block mb-[12px] text-sm font-medium text-secondary-100 dark:text-white">
+                            Your
+                            Rank
+                        </label>
+                        <select id="large" class="select-common block w-full rank" name="Rank" onchange="AddValidationDropDown()">
+                            @foreach (var item in ViewBag.Rank)
+                            {
+                                <option value="@item.Value" @(item.Selected ? "selected" : "")>@item.Text</option>
+                            }
+                        </select>
+                        <span class="error">@Html.ValidationMessageFor(model => model.Rank)</span>
+                    </div>
+                </div>
+                <div class="divider-common"></div>
+                <div class="social-links-form grid gap-[16px]">
+                    <div class="flex items-center justify-end checkbox-common py-[8px]">
+                        <input id="default-checkbox" type="checkbox" value=""
+                               class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300   dark:ring-offset-gray-800  dark:bg-gray-700 dark:border-gray-600">
+                        <label for="default-checkbox"
+                               class="ml-2 text-sm font-medium text-secondary-100 dark:text-gray-300">
+                            Hide Host info
+                        </label>
+                    </div>
+                    <div class="font-semibold text-base">Social Links </div>
+                    <div class="input-field-common">
+                        <label for="email"
+                               class="block mb-[12px] text-sm font-medium text-secondary-100 dark:text-white">
+                            Your
+                            Twitter
+                        </label>
+                        <input type="text" class="w-full" placeholder="twitter" name="Twitter" id="Twitter" required oninput="AddValidationBox()">
+                        <span class="error">@Html.ValidationMessageFor(model => model.Twitter)</span>
+                    </div>
+                    <div class="input-field-common">
+                        <label for="email"
+                               class="block mb-[12px] text-sm font-medium text-secondary-100 dark:text-white">
+                            Your
+                            Instagram
+                        </label>
+                        <input type="text" class="w-full" placeholder="Instagram" name="Instagram" id="Instagram" required oninput="AddValidationBox()">
+                        <span class="error">@Html.ValidationMessageFor(model => model.Instagram)</span>
+                    </div>
+                    <div class="input-field-common">
+                        <label for="email"
+                               class="block mb-[12px] text-sm font-medium text-secondary-100 dark:text-white">
+                            Your
+                            Tiktok
+                        </label>
+                        <input type="text" class="w-full" placeholder="Tiktok" name="TikTok" id="TikTok" required oninput="AddValidationBox()">
+                        <span class="error">@Html.ValidationMessageFor(model => model.Tiktok)</span>
+                    </div>
+                </div>
+                <div class="divider-common"></div>
+                <div class="social-links-form grid gap-[16px]">
+                    <div class="flex items-center justify-end checkbox-common py-[8px]">
+                        <input id="default-checkbox" type="checkbox" value=""
+                               class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300   dark:ring-offset-gray-800  dark:bg-gray-700 dark:border-gray-600">
+                        <label for="default-checkbox"
+                               class="ml-2 text-sm font-medium text-secondary-100 dark:text-gray-300">
+                            Hide Host info
+                        </label>
+                    </div>
+                    <div>
+                            <label for="Gallery"
+                                   class="block mb-[12px] text-sm font-medium text-secondary-100 dark:text-white">
+                                Gallery
+                            </label>
+                            <div class="file-upload-common">
+                                <label for="file_input" class="custom-file-upload" name="HostImage">
+                                    <span>Choose Images</span>
+                                </label>
+                                @*<input type="file" class="HostImage imageInput2" id="imageInput2" style="display:none;">*@
+                                <input class="form-control HostImage" type="file" id="checkForm" multiple>                                
+                                <p id="file_name_display_Host">No File Choosen</p>
+                            </div>
+                            <div class="text-xs text-error mt-[8px]">
+                                Note: Image should be in HEIF format and Maximum file
+                                size
+                                is 5 MB.
+                            </div>
+                        </div>
+                </div>
+                <div class="divider-common"></div>
+                <div class="grid gap-[16px]">
+                    <div class="input-field-common">
+                        <label for="email"
+                               class="block mb-[12px] text-sm font-medium text-secondary-100 dark:text-white">
+                            Your
+                            Birth date
+                        </label>
+                        <div class="select-date-common flex gap-[16px]" name="DateOfBirth">
+                            <select id="large" class="select-common block w-[72px] year" name="DateOfBirth">
+                                <option selected>YYYY</option>
+                                <option value="1990">1990</option>
+                                <option value="1991">1991</option>
+                                <option value="1992">1992</option>
+                                <option value="1993">1993</option>
+                            </select>
+                            <select id="large" class="select-common block w-[72px] month">
+                                <option selected>MM</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                            </select>
+                            <select id="large" class="select-common block w-[72px] day">
+                                <option selected>DD</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="toogle-common">
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" value="" class="sr-only peer" checked>
+                            <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-secondary-color-pink">
+                            </div>
+                            <span class=" pl-2 text-sm font-medium text-secondary-100">hide</span>
+                        </label>
+                    </div>
+                    <div class="flex gap-[24px]">
+                        <div class="flex items-center checkbox-common py-[8px]">
+                            <input id="default-checkbox-year" type="checkbox" value=""
+                                   class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300   dark:ring-offset-gray-800  dark:bg-gray-700 dark:border-gray-600">
+                            <label for="default-checkbox-year"
+                                   class="ml-2 text-sm font-medium text-secondary-100 dark:text-gray-300">
+                                Year
+                            </label>
+                        </div>
+                        <div class="flex items-center checkbox-common py-[8px]">
+                            <input id="default-checkbox-month" type="checkbox" value=""
+                                   class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300   dark:ring-offset-gray-800  dark:bg-gray-700 dark:border-gray-600">
+                            <label for="default-checkbox-month"
+                                   class="ml-2 text-sm font-medium text-secondary-100 dark:text-gray-300">
+                                Month
+                            </label>
+                        </div>
+                        <div class="flex items-center checkbox-common py-[8px]">
+                            <input id="default-checkbox-date" type="checkbox" value=""
+                                   class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300   dark:ring-offset-gray-800  dark:bg-gray-700 dark:border-gray-600">
+                            <label for="default-checkbox-date"
+                                   class="ml-2 text-sm font-medium text-secondary-100 dark:text-gray-300">
+                                Date
+                            </label>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-end checkbox-common py-[8px]">
+                        <input id="default-checkbox" type="checkbox" value=""
+                               class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300   dark:ring-offset-gray-800  dark:bg-gray-700 dark:border-gray-600">
+                        <label for="default-checkbox"
+                               class="ml-2 text-sm font-medium text-secondary-100 dark:text-gray-300">
+                            Hide Host info
+                        </label>
+                    </div>
+                </div>
+                <div class="grid gap-[16px]">
+                    <div class="grid grid-cols-2 gap-x-[20px] gap-y-[16px]">
+                        <div class="input-field-common">
+                            <label for="email"
+                                   class="block mb-[12px] text-sm font-medium text-secondary-100 dark:text-white">
+                                Constellation Group
+                            </label>
+                            <select id="large" class="select-common block w-full Constellation" name="Constellation" onchange="AddValidationDropDown()">
+                                @foreach (var item in ViewBag.Zodiac)
+                                {
+                                    <option value="@item.Value" @(item.Selected ? "selected" : "")>@item.Text</option>
+                                }
+                            </select>
+                            <span class="error">@Html.ValidationMessageFor(model => model.Constellation)</span>
+                        </div>
+                        <div></div>
+                        <div class="input-field-common">
+                            <label for="email"
+                                   class="block mb-[12px] text-sm font-medium text-secondary-100 dark:text-white">
+                                Height
+                            </label>
+                            <input type="text" class="w-full" placeholder="Height" name="Height" id="Height" required oninput="AddValidationBox()">
+                            <span class="error">@Html.ValidationMessageFor(model => model.Height)</span>
+                        </div>
+                        <div class="input-field-common">
+                            <label for="email"
+                                   class="block mb-[12px] text-sm font-medium text-secondary-100 dark:text-white">
+                                Blood type
+                            </label>
+                            <select id="large" class="select-common block w-full BloodType" name="BloodType" onchange="AddValidationDropDown()">
+                                @foreach (var item in ViewBag.BloodType)
+                                {
+                                    <option value="@item.Value" @(item.Selected ? "selected" : "")>@item.Text</option>
+                                }
+                            </select>
+                            <span class="error">@Html.ValidationMessageFor(model => model.BloodType)</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-end checkbox-common py-[8px]">
+                        <input id="default-checkbox" type="checkbox" value=""
+                               class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300   dark:ring-offset-gray-800  dark:bg-gray-700 dark:border-gray-600">
+                        <label for="default-checkbox"
+                               class="ml-2 text-sm font-medium text-secondary-100 dark:text-gray-300">
+                            Hide Host info
+                        </label>
+                    </div>
+                    <div class="grid grid-cols-2 gap-x-[20px] gap-y-[16px]">
+                        <div class="input-field-common">
+                            <label for="email"
+                                   class="block mb-[12px] text-sm font-medium text-secondary-100 dark:text-white">
+                                Previous Occupationp
+                            </label>
+                            <select id="large" class="select-common block w-full PreviousOccupation" name="PreviousOccupation" onchange="AddValidationDropDown()">
+                                @foreach (var item in ViewBag.PreviousOccupation)
+                                {
+                                    <option value="@item.Value" @(item.Selected ? "selected" : "")>@item.Text</option>
+                                }
+                            </select>
+                            <span class="error">@Html.ValidationMessageFor(model => model.PreviousOccupation)</span>
+                        </div>
+                        <div class="input-field-common">
+                            <label for="email"
+                                   class="block mb-[12px] text-sm font-medium text-secondary-100 dark:text-white">
+                                Liquor Strength
+                            </label>
+                            <select id="large" class="select-common block w-full Liquor" name="Liquor" onchange="AddValidationDropDown()">
+                                @foreach (var item in ViewBag.LiquoreStrength)
+                                {
+                                    <option value="@item.Value" @(item.Selected ? "selected" : "")>@item.Text</option>
+                                }
+                            </select>
+                            <span class="error">@Html.ValidationMessageFor(model => model.Liquor)</span>
+                        </div>
+                    </div>
+                </div>
+                <span class="error">@Html.ValidationMessageFor(model => model.ExtraMessage)</span>
+                <div class="flex justify-end py-[16px] ">
+                    <div class="flex gap-[24px]">
+                        <div class="btn btn-secondary" data-drawer-hide="add-new-host" aria-controls="add-new-host">
+                            Cancel
+                        </div>
+                        <button type="submit" class="btn btn-primary" onclick="checkImageHost(event)">Submit</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@*<div id="edit-host"
+         class="drawer-close-disable  flex justify-end fixed top-0 right-0 z-40 h-screen overflow-y-auto transition-transform translate-x-full  dark:bg-gray-800"
+         tabindex="-1" aria-labelledby="drawer-right-label" style="display: none;">
+        <div class="bg-white w-[574px] drawer-container relative">
+            <div class="drawer-form-container sticky top-0 ">
+                <div class="drawer-form flex justify-between bg-secondary-color-pink py-[16px] px-[24px] h-[56px]">
+                    <div>Manage Host</div>
+                    <button type="button" data-drawer-hide="add-new-host" aria-controls="add-new-host" class="text-[20px]">
+                        <i class="las la-window-close text-white"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="p-[24px]">
+                @using (Html.BeginForm("AddClubHost", "ClubManagement", new { }, FormMethod.Post, new { @role = "form", @id = "UploadForm", enctype = "multipart/form-data" }))
+                {
+                    <input type="text" class="w-full " name="AgentId" style="display:none" id="EHAgentID">
+                    <input type="text" class="w-full " name="HostID" style="display:none" id="EHostID">
+                    <div class="grid grid-cols-2 gap-x-[20px] gap-y-[16px]">
+                        <div class="input-field-common">
+                            <label for="email"
+                                   class="block mb-[12px] text-sm font-medium text-secondary-100 dark:text-white">
+                                Your
+                                Host Name
+                            </label>
+                            <input type="text" class="w-full EHName" placeholder="Host Name" name="HostName" id="HostName" required oninput="AddValidationBox()">
+                            <span class="error">@Html.ValidationMessageFor(model => model.HostName)</span>
+                        </div>
+                        <div class="input-field-common">
+                            <label for="email"
+                                   class="block mb-[12px] text-sm font-medium text-secondary-100 dark:text-white">
+                                Your
+                                Position
+                            </label>
+                            <input type="text" class="w-full EPosition" placeholder="Position" id="Position" name="Position" required oninput="AddValidationBox()">
+                            <span class="error">@Html.ValidationMessageFor(model => model.Position)</span>
+                        </div>
+                        <div class="input-field-common">
+                            <label for="email"
+                                   class="block mb-[12px] text-sm font-medium text-secondary-100 dark:text-white">
+                                Your
+                                Rank
+                            </label>
+                            <select id="large" class="select-common block w-full Erank" name="Rank">
+                                @foreach (var item in ViewBag.Rank)
+                                {
+                                    <option value="@item.Value" @(item.Selected ? "selected" : "")>@item.Text</option>
+                                }
+                            </select>
+                            <span class="error">@Html.ValidationMessageFor(model => model.Rank)</span>
+                        </div>
+                    </div>
+                    <div class="divider-common"></div>
+                    <div class="social-links-form grid gap-[16px]">
+                        <div class="flex items-center justify-end checkbox-common py-[8px]">
+                            <input id="default-checkbox" type="checkbox" value=""
+                                   class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300   dark:ring-offset-gray-800  dark:bg-gray-700 dark:border-gray-600">
+                            <label for="default-checkbox"
+                                   class="ml-2 text-sm font-medium text-secondary-100 dark:text-gray-300">
+                                Hide Host info
+                            </label>
+                        </div>
+                        <div class="font-semibold text-base">Social Links </div>
+                        <div class="input-field-common">
+                            <label for="email"
+                                   class="block mb-[12px] text-sm font-medium text-secondary-100 dark:text-white">
+                                Your
+                                Twitter
+                            </label>
+                            <input type="url" class="w-full TURL" placeholder="twitter" name="Twitter" id="Twitter" required oninput="AddValidationBox()">
+                            <span class="error">@Html.ValidationMessageFor(model => model.Twitter)</span>
+                        </div>
+                        <div class="input-field-common">
+                            <label for="email"
+                                   class="block mb-[12px] text-sm font-medium text-secondary-100 dark:text-white">
+                                Your
+                                Instagram
+                            </label>
+                            <input type="url" class="w-full IURL" placeholder="Instagram" name="Instagram" id="Instagram" required oninput="AddValidationBox()">
+                            <span class="error">@Html.ValidationMessageFor(model => model.Instagram)</span>
+                        </div>
+                        <div class="input-field-common">
+                            <label for="email"
+                                   class="block mb-[12px] text-sm font-medium text-secondary-100 dark:text-white">
+                                Your
+                                Tiktok
+                            </label>
+                            <input type="url" class="w-full TIURL" placeholder="Tiktok" name="TikTok" id="TikTok" required oninput="AddValidationBox()">
+                            <span class="error">@Html.ValidationMessageFor(model => model.Tiktok)</span>
+                        </div>
+                    </div>
+                    <div class="divider-common"></div>
+                    <div class="social-links-form grid gap-[16px]">
+                        <div class="flex items-center justify-end checkbox-common py-[8px]">
+                            <input id="default-checkbox" type="checkbox" value=""
+                                   class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300   dark:ring-offset-gray-800  dark:bg-gray-700 dark:border-gray-600">
+                            <label for="default-checkbox"
+                                   class="ml-2 text-sm font-medium text-secondary-100 dark:text-gray-300">
+                                Hide Host info
+                            </label>
+                        </div>
+                        <div>
+                            <label for="Gallery"
+                                   class="block mb-[12px] text-sm font-medium text-secondary-100 dark:text-white">
+                                Gallery
+                            </label>
+                            <div class="file-upload-common">
+                                <label for="file_input" class="custom-file-upload" name="HostImage">
+                                    <span>Choose Images</span>
+                                </label>
+                                <input type="file" class="form-control-file HostImage imageInput3" id="imageInput3" oninput="AddValidationBox()">
+                                <p id="file_name_display1">No File Choosen</p>
+                            </div>
+                            <div class="text-xs text-error mt-[8px]">
+                                Note: Image should be in HEIF format and Maximum file
+                                size
+                                is 5 MB.
+                            </div>
+                            <span class="error">@Html.ValidationMessageFor(model => model.HostImage)</span>
+                        </div>
+                    </div>
+                    <div class="divider-common"></div>
+                    <div class="grid gap-[16px]">
+                        <div class="input-field-common">
+                            <label for="email"
+                                   class="block mb-[12px] text-sm font-medium text-secondary-100 dark:text-white">
+                                Your
+                                Birth date
+                            </label>
+                            <div class="select-date-common flex gap-[16px] year" name="DateOfBirth">
+                                <select id="large" class="select-common block w-[72px] Eyear" name="DateOfBirth">
+                                    <option selected>YYYY</option>
+                                    <option value="1990">1990</option>
+                                    <option value="1991">1991</option>
+                                    <option value="1992">1992</option>
+                                    <option value="1993">1993</option>
+                                </select>
+                                <select id="large" class="select-common block w-[72px] Emonth">
+                                    <option selected>MM</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                </select>
+                                <select id="large" class="select-common block w-[72px] Eday">
+                                    <option selected>DD</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                </select>
+                            </div>
+                            <span class="error">@Html.ValidationMessageFor(model => model.DateOfBirth)</span>
+                        </div>
+                        <div class="toogle-common">
+                            <label class="relative inline-flex items-center cursor-pointer">
+                                <input type="checkbox" value="" class="sr-only peer" checked>
+                                <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-secondary-color-pink">
+                                </div>
+                                <span class=" pl-2 text-sm font-medium text-secondary-100">hide</span>
+                            </label>
+                        </div>
+                        <div class="flex gap-[24px]">
+                            <div class="flex items-center checkbox-common py-[8px]">
+                                <input id="default-checkbox-year" type="checkbox" value=""
+                                       class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300   dark:ring-offset-gray-800  dark:bg-gray-700 dark:border-gray-600">
+                                <label for="default-checkbox-year"
+                                       class="ml-2 text-sm font-medium text-secondary-100 dark:text-gray-300">
+                                    Year
+                                </label>
+                            </div>
+                            <div class="flex items-center checkbox-common py-[8px]">
+                                <input id="default-checkbox-month" type="checkbox" value=""
+                                       class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300   dark:ring-offset-gray-800  dark:bg-gray-700 dark:border-gray-600">
+                                <label for="default-checkbox-month"
+                                       class="ml-2 text-sm font-medium text-secondary-100 dark:text-gray-300">
+                                    Month
+                                </label>
+                            </div>
+                            <div class="flex items-center checkbox-common py-[8px]">
+                                <input id="default-checkbox-date" type="checkbox" value=""
+                                       class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300   dark:ring-offset-gray-800  dark:bg-gray-700 dark:border-gray-600">
+                                <label for="default-checkbox-date"
+                                       class="ml-2 text-sm font-medium text-secondary-100 dark:text-gray-300">
+                                    Date
+                                </label>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-end checkbox-common py-[8px]">
+                            <input id="default-checkbox" type="checkbox" value=""
+                                   class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300   dark:ring-offset-gray-800  dark:bg-gray-700 dark:border-gray-600">
+                            <label for="default-checkbox"
+                                   class="ml-2 text-sm font-medium text-secondary-100 dark:text-gray-300">
+                                Hide Host info
+                            </label>
+                        </div>
+                    </div>
+                    <div class="grid gap-[16px]">
+                        <div class="grid grid-cols-2 gap-x-[20px] gap-y-[16px]">
+                            <div class="input-field-common">
+                                <label for="email"
+                                       class="block mb-[12px] text-sm font-medium text-secondary-100 dark:text-white">
+                                    Constellation Group
+                                </label>
+                                <select id="large" class="select-common block w-full EConstellation" name="Constellation">
+                                    @foreach (var item in ViewBag.Zodiac)
+                                    {
+                                        <option value="@item.Value" @(item.Selected ? "selected" : "")>@item.Text</option>
+                                    }
+                                </select>
+                                <span class="error">@Html.ValidationMessageFor(model => model.Constellation)</span>
+                            </div>
+                            <div></div>
+                            <div class="input-field-common">
+                                <label for="email"
+                                       class="block mb-[12px] text-sm font-medium text-secondary-100 dark:text-white">
+                                    Height
+                                </label>
+                                <input type="text" class="w-full Eheignt" placeholder="Height" name="Height" required oninput="AddValidationBox()">
+                                <span class="error">@Html.ValidationMessageFor(model => model.Height)</span>
+                            </div>
+                            <div class="input-field-common">
+                                <label for="email"
+                                       class="block mb-[12px] text-sm font-medium text-secondary-100 dark:text-white">
+                                    Blood type
+                                </label>
+                                <select id="large" class="select-common block w-full EBloodType" name="BloodType">
+                                    @foreach (var item in ViewBag.BloodType)
+                                    {
+                                        <option value="@item.Value" @(item.Selected ? "selected" : "")>@item.Text</option>
+                                    }
+                                </select>
+                                <span class="error">@Html.ValidationMessageFor(model => model.BloodType)</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-end checkbox-common py-[8px]">
+                            <input id="default-checkbox" type="checkbox" value=""
+                                   class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300   dark:ring-offset-gray-800  dark:bg-gray-700 dark:border-gray-600">
+                            <label for="default-checkbox"
+                                   class="ml-2 text-sm font-medium text-secondary-100 dark:text-gray-300">
+                                Hide Host info
+                            </label>
+                        </div>
+                        <div class="grid grid-cols-2 gap-x-[20px] gap-y-[16px]">
+                            <div class="input-field-common">
+                                <label for="email"
+                                       class="block mb-[12px] text-sm font-medium text-secondary-100 dark:text-white">
+                                    Previous Occupationp
+                                </label>
+                                <select id="large" class="select-common block w-full EPreviousOccupation" name="PreviousOccupation">
+                                    @foreach (var item in ViewBag.PreviousOccupation)
+                                    {
+                                        <option value="@item.Value" @(item.Selected ? "selected" : "")>@item.Text</option>
+                                    }
+                                </select>
+                                <span class="error">@Html.ValidationMessageFor(model => model.PreviousOccupation)</span>
+                            </div>
+                            <div class="input-field-common">
+                                <label for="email"
+                                       class="block mb-[12px] text-sm font-medium text-secondary-100 dark:text-white">
+                                    Liquor Strength
+                                </label>
+                                <select id="large" class="select-common block w-full ELiquor" name="Liquor">
+                                    @foreach (var item in ViewBag.LiquoreStrength)
+                                    {
+                                        <option value="@item.Value" @(item.Selected ? "selected" : "")>@item.Text</option>
+                                    }
+                                </select>
+                                <span class="error">@Html.ValidationMessageFor(model => model.Liquor)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-end py-[16px] ">
+                        <div class="flex gap-[24px]">
+                            <div class="btn btn-secondary CancellUpdate" data-drawer-hide="add-new-host" aria-controls="add-new-host">
+                                Cancel
+                            </div>
+                            <button type="submit" class="btn btn-primary" onclick="EditImageHost(event)">Submit</button>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>*@
+
+<script>
+    // Get references to the file input and file name display element
+    const fileInput = document.getElementById("file_input");
+    debugger;
+    const fileNameDisplay = document.getElementById("file_name_display");
+
+    // Add an event listener to the file input
+    fileInput.addEventListener("change", function () {
+        // Check if a file has been selected
+        if (fileInput.files.length > 0) {
+            // Display the name of the selected file
+            fileNameDisplay.textContent = `Selected File: ${fileInput.files[0].name}`;
+        } else {
+            // No file selected
+            fileNameDisplay.textContent = "";
+        }
+    });
+
+    // Get references to the file input and file name display element
+    const fileInputHost = document.getElementById("imageInput2");
+    debugger;
+    const fileNameDisplayHost = document.getElementById("file_name_display_Host");
+
+    // Add an event listener to the file input
+    fileInputHost.addEventListener("change", function () {
+        // Check if a file has been selected
+        if (fileInputHost.files.length > 0) {
+            // Display the name of the selected file
+            fileNameDisplayHost.textContent = `Selected File: ${fileInputHost.files[0].name}`;
+        } else {
+            // No file selected
+            fileNameDisplayHost.textContent = "";
+        }
+    });
+    function CheckAgain(event) {
+        debugger;
+        var HostNmae = $("#HostName").val().trim();
+        let Pos = $('#Position').val().trim();
+        let XURL = $('#Twitter').val().trim();
+        let InstURL = $('#Instagram').val().trim();
+        let TiURL = $('#TikTok').val().trim();
+        let Height = $('#Height').val().trim();
+        var Rank = $(".rank").val().trim();
+        let Zodiac = $('.Constellation').val().trim();
+        let BType = $('.BloodType').val().trim();
+        let PreOcc = $('.PreviousOccupation').val().trim();
+        let Liq = $('.Liquor').val().trim();
+
+        if (HostNmae.length >= 0 && Pos.length >= 0 && XURL.length >= 0 && InstURL.length >= 0 && TiURL.length >= 0 && Height.length >= 0
+            && Rank.length >= 0 && Zodiac.length >= 0 && BType.length >= 0 && PreOcc.length >= 0 && Liq.length >= 0) {
+            e.preventDefault();
+            $('span[data-valmsg-for="ExtraMessage"]').addClass("field-validation-valid text-danger");
+            $('span[data-valmsg-for="ExtraMessage"]').addClass("field-validation-error text-danger").html("Parameters are Missing");
+            return false;
+        }
+        else {
+            $('span[data-valmsg-for="ExtraMessage"]').addClass("field-validation-valid");
+            $('span[data-valmsg-for="ExtraMessage"]').addClass("field-validation-error").html(" ");
+            return true;
+        }
+
+        //var isAllLessThanZero = HostNmae.length <= 0 && Pos.length <= 0 && XURL.length <= 0 && InstURL.length <= 0 && TiURL.length <= 0 && Height.length <= 0
+        //    && Rank.length <= 0 && Zodiac.length <= 0 && BType.length <= 0 && PreOcc.length <= 0 && Liq.length <= 0;
+
+        //if (isAllLessThanZero) {
+        //    $('span[data-valmsg-for="ExtraMessage"]').addClass("field-validation-valid");
+        //    $('span[data-valmsg-for="ExtraMessage"]').addClass("field-validation-error").html(" ");
+        //    return true;
+        //    console.log("All values have length less than or equal to 0.");
+        //} else {
+        //    event.preventDefault();
+        //    $('span[data-valmsg-for="ExtraMessage"]').addClass("field-validation-valid text-danger");
+        //    $('span[data-valmsg-for="ExtraMessage"]').addClass("field-validation-error text-danger").html("Parameters are Missing");
+        //    return false;
+        //}
+    }
+    $("#CheckAgain").on("click", function (e) {
+        debugger
+        var HostNmae = $("#HostName").val().trim();
+        let Pos = $('#Position').val().trim();
+        let XURL = $('#Twitter').val().trim();
+        let InstURL = $('#Instagram').val().trim();
+        let TiURL = $('#TikTok').val().trim();
+        let Height = $('#Height').val().trim();
+        var Rank = $(".rank").val().trim();
+        let Zodiac = $('.Constellation').val().trim();
+        let BType = $('.BloodType').val().trim();
+        let PreOcc = $('.PreviousOccupation').val().trim();
+        let Liq = $('.Liquor').val().trim();
+
+
+        if (HostNmae.length >= 0 && Pos.length >= 0 && XURL.length >= 0 && InstURL.length >= 0 && TiURL.length >= 0 && Height.length >= 0
+            && Rank.length >= 0 && Zodiac.length >= 0 && BType.length >= 0 && PreOcc.length >= 0 && Liq.length >= 0) {
+            e.preventDefault();
+            $('span[data-valmsg-for="ExtraMessage"]').addClass("field-validation-valid text-danger");
+            $('span[data-valmsg-for="ExtraMessage"]').addClass("field-validation-error text-danger").html("Parameters are Missing");
+            return false;
+        } 
+        else {
+            $('span[data-valmsg-for="ExtraMessage"]').addClass("field-validation-valid");
+            $('span[data-valmsg-for="ExtraMessage"]').addClass("field-validation-error").html(" ");
+            return true;
+        }
+    });
+
+    var HostName = $("#HostName").val().trim();
+    var Position = $('#Position').val().trim();
+    var Twitter = $('#Twitter').val().trim();
+    var Instagram = $('#Instagram').val().trim();
+    var TikTok = $('#TikTok').val().trim();
+    var Height = $('#Height').val().trim();
+    var Rank = $(".rank").val().trim();
+    var Constellation = $('.Constellation').val().trim();
+    var BloodType = $('.BloodType').val().trim();
+    var PreviousOccupation = $('.PreviousOccupation').val().trim();
+    var Liquor = $('.Liquor').val().trim();
+
+    // Check if there is a value in each field
+    if (HostName !== "" || Position !== "" || Twitter !== "" || Instagram !== "" || TikTok !== "" || Height !== "" || Rank !== "" || Constellation !== "" || BloodType !== "" || PreviousOccupation !== "" || Liquor !== "") {
+        console.log("At least one field has a value.");
+    } else {
+        console.log("All fields are empty.");
+    }
+
+
+    $(".CancellUpdate").on("click", function () {
+        debugger;
+        $(".EHName").val(" ");
+        $(".EPosition").val(" ");
+        $(".Erank").val(" ");
+        $(".TURL").val(" ");
+        $(".IURL").val(" ");
+        $(".TIURL").val(" ");
+        //$(".imageInput2").val(" ");
+        $(".year").val(" ");
+        $(".month").val(" ");
+        $(".day").val(" ");
+        $(".EConstellation").val(" ");
+        $(".Eheignt").val(" ");
+        $(".EBloodType").val(" ");
+        $(".EPreviousOccupation").val(" ");
+        $(".ELiquor").val(" ");
+        $("#edit-host").fadeOut();
+    });
+    CheckAgain
+    function AddValidationBox() {
+        var HostNmae = $("#HostName").val();
+        let Pos = $('#Position').val();
+        let XURL = $('#Twitter').val();
+        let InstURL = $('#Instagram').val();
+        let TiURL = $('#TikTok').val();
+        let Height = $('#Height').val();
+        if (HostNmae.length <= 0) {
+            $('span[data-valmsg-for="HostName"]').addClass("field-validation-valid text-danger");
+            $('span[data-valmsg-for="HostName"]').addClass("field-validation-error text-danger").html("Host Name is required");
+        }
+        else {
+            $('span[data-valmsg-for="HostName"]').addClass("field-validation-valid");
+            $('span[data-valmsg-for="HostName"]').addClass("field-validation-error").html(" ");
+        }
+        if (Pos.length <= 0) {
+            $('span[data-valmsg-for="Position"]').addClass("field-validation-valid text-danger");
+            $('span[data-valmsg-for="Position"]').addClass("field-validation-error text-danger").html("Position is required");
+        }
+        else {
+            $('span[data-valmsg-for="Position"]').addClass("field-validation-valid");
+            $('span[data-valmsg-for="Position"]').addClass("field-validation-error").html(" ");
+        }
+        if (XURL.length <= 0) {
+            $('span[data-valmsg-for="Twitter"]').addClass("field-validation-valid text-danger");
+            $('span[data-valmsg-for="Twitter"]').addClass("field-validation-error text-danger").html("Twitter URL is required");
+        }
+        else {
+            $('span[data-valmsg-for="Twitter"]').addClass("field-validation-valid");
+            $('span[data-valmsg-for="Twitter"]').addClass("field-validation-error").html(" ");
+        }
+        if (InstURL.length <= 0) {
+            $('span[data-valmsg-for="Instagram"]').addClass("field-validation-valid text-danger");
+            $('span[data-valmsg-for="Instagram"]').addClass("field-validation-error text-danger").html("Instagram URL is required");
+        }
+        else {
+            $('span[data-valmsg-for="Instagram"]').addClass("field-validation-valid");
+            $('span[data-valmsg-for="Instagram"]').addClass("field-validation-error").html(" ");
+        }
+        if (TiURL.length <= 0) {
+            $('span[data-valmsg-for="Tiktok"]').addClass("field-validation-valid text-danger");
+            $('span[data-valmsg-for="Tiktok"]').addClass("field-validation-error text-danger").html("Tiktok URL is required");
+        }
+        else {
+            $('span[data-valmsg-for="Tiktok"]').addClass("field-validation-valid");
+            $('span[data-valmsg-for="Tiktok"]').addClass("field-validation-error").html(" ");
+        }
+        if (Height.length <= 0) {
+            $('span[data-valmsg-for="Height"]').addClass("field-validation-valid text-danger");
+            $('span[data-valmsg-for="Height"]').addClass("field-validation-error text-danger").html("Height is required");
+        }
+        else {
+            $('span[data-valmsg-for="Height"]').addClass("field-validation-valid");
+            $('span[data-valmsg-for="Height"]').addClass("field-validation-error").html(" ");
+        }
+    }
+    function AddValidationDropDown() {
+        var Rank = $(".rank").val();
+        let Zodiac = $('.Constellation').val();
+        let BType = $('.BloodType').val();
+        let PreOcc = $('.PreviousOccupation').val();
+        let Liq = $('.Liquor').val();
+        if (Rank.length <= 0) {
+            $('span[data-valmsg-for="Rank"]').addClass("field-validation-valid text-danger");
+            $('span[data-valmsg-for="Rank"]').addClass("field-validation-error text-danger").html("Rank is required");
+        }
+        else {
+            $('span[data-valmsg-for="Rank"]').addClass("field-validation-valid");
+            $('span[data-valmsg-for="Rank"]').addClass("field-validation-error").html(" ");
+        }
+        if (BType.length <= 0) {
+            $('span[data-valmsg-for="BloodType"]').addClass("field-validation-valid text-danger");
+            $('span[data-valmsg-for="BloodType"]').addClass("field-validation-error text-danger").html("Blood Type is required");
+        }
+        else {
+            $('span[data-valmsg-for="BloodType"]').addClass("field-validation-valid");
+            $('span[data-valmsg-for="BloodType"]').addClass("field-validation-error").html(" ");
+        }
+        if (Liq.length <= 0) {
+            $('span[data-valmsg-for="Liquor"]').addClass("field-validation-valid text-danger");
+            $('span[data-valmsg-for="Liquor"]').addClass("field-validation-error text-danger").html("Liquor is required");
+        }
+        else {
+            $('span[data-valmsg-for="Liquor"]').addClass("field-validation-valid");
+            $('span[data-valmsg-for="Liquor"]').addClass("field-validation-error").html(" ");
+        }
+        if (PreOcc.length <= 0) {
+            $('span[data-valmsg-for="PreviousOccupation"]').addClass("field-validation-valid text-danger");
+            $('span[data-valmsg-for="PreviousOccupation"]').addClass("field-validation-error text-danger").html("Previous Occupation is required");
+        }
+        else {
+            $('span[data-valmsg-for="PreviousOccupation"]').addClass("field-validation-valid");
+            $('span[data-valmsg-for="PreviousOccupation"]').addClass("field-validation-error").html(" ");
+        }
+        if (Zodiac.length <= 0) {
+            $('span[data-valmsg-for="Constellation"]').addClass("field-validation-valid text-danger");
+            $('span[data-valmsg-for="Constellation"]').addClass("field-validation-error text-danger").html("Constellation is required");
+        }
+        else {
+            $('span[data-valmsg-for="Constellation"]').addClass("field-validation-valid");
+            $('span[data-valmsg-for="Constellation"]').addClass("field-validation-error").html(" ");
+        }
+    }
+</script>
