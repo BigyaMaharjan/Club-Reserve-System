@@ -17,7 +17,7 @@ namespace CRS.CLUB.APPLICATION.Controllers
         {
             _BUSS = BUSS;
         }
-        #region Login Management
+        #region Login_Management
         [OverrideActionFilters]
         public ActionResult Index()
         {
